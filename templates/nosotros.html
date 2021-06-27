@@ -1,0 +1,282 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Observatorio de Salud Mental</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{% static 'img/apple-icon.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <!-- Load Require CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="{% static 'css/boxicon.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="{% static 'css/templatemo.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+<!--
+    
+TemplateMo 561 Purple Buzz
+
+https://templatemo.com/tm-561-purple-buzz
+
+-->
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="{% url 'inicio' %}">
+                <i class='bx bx-buildings bx-sm text-dark'></i>
+                <span class="text-dark h4">Smart</span> <span class="text-primary h4">Mind</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'inicio' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="">Trastornos mentales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'nosotros' %}">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'suscripcion' %}">Suscribete</a>
+                        </li>
+                        <!--<li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">Contact</a>
+                        </li>-->
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" href="#"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i></a>
+                    <a class="nav-link" href="#"><i class='bx bx-cog bx-sm text-primary'></i></a>
+                    <a class="nav-link" href="#"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+
+    <!-- Start Banner Hero -->
+    <section class="bg-light w-100">
+        <div class="container">
+            <div class="row d-flex align-items-center py-5">
+                <div class="col-lg-6 text-start">
+                    <h1 class="h2 py-5 text-primary typo-space-line">Sobre Nosotros</h1>
+                    <p class="light-300">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam mollitia quibusdam voluptas perspiciatis ea suscipit nisi, iure, tempore accusantium placeat, sunt delectus nobis beatae ipsa voluptatum repellat odio! Modi, incidunt.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'img/banner-img-02.svg' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Hero -->
+
+
+    <!-- Start Team Member -->
+    <section class="container py-5">
+        <div class="pt-5 pb-3 d-lg-flex align-items-center gx-5">
+
+            <div class="col-lg-3">
+                <h2 class="h2 py-5 typo-space-line">¿Quiénes Somos?</h2>
+                <p class="text-muted light-300">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+
+            <div class="col-lg-9 row">
+                <div class="team-member col-md-3">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Kevin Ccorimanya</li>
+                        <li>Business Development</li>
+                    </ul>
+                </div>
+                <div class="team-member col-md-3">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Fidel Chavez</li>
+                        <li>Media Development</li>
+                    </ul>
+                </div>
+                <div class="team-member col-md-3">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-2.jpg' %}" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Lizet Cuevas</li>
+                        <li>Developer</li>
+                    </ul>
+                </div>
+                <div class="team-member col-md-3">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Luis Valdivia</li>
+                        <li>Developer</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pt-5 pb-3 d-lg-flex align-items-center gx-5">
+
+            <div class="col-lg-3">
+                
+            </div>
+
+            <div class="col-lg-9 row">
+                <div class="team-member col-md-3">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Gilbert Ramos</li>
+                        <li>Business Development</li>
+                    </ul>
+                </div>
+                <div class="team-member col-md-3">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-2.jpg' %}" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Indira Hancco</li>
+                        <li>Media Development</li>
+                    </ul>
+                </div>
+                <div class="team-member col-md-3">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Ayrton Garcia</li>
+                        <li>Developer</li>
+                    </ul>
+                </div>
+                <div class="team-member col-md-3">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Jeremy Cruz</li>
+                        <li>Developer</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Team Member -->
+
+    <!-- Start Our Partner -->
+    <section class="bg-secondary py-1">
+        <div class="container py-1">
+            <h2 class="h2 text-white text-center py-5">Más Información</h2>
+            
+        </div>
+    </section>
+    <!--End Our Partner-->
+
+    <!-- Start Choice -->
+    <section class="why-us banner-bg bg-light">
+        <div class="container my-4">
+            <div class="row">
+                <div class="banner-img col-lg-5">
+                    <img src="{% static 'img/work.svg' %}" class="rounded img-fluid" alt="">
+                </div>
+                <div class="banner-content col-lg-7 align-self-end">
+                    <h2 class="h2 pb-3">¿Por qué necesitamos un observatorio de salud mental?</h2>
+                    <p class="text-muted pb-5 light-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati blanditiis beatae dignissimos voluptas sit libero veritatis autem eos, praesentium similique impedit reiciendis officia possimus accusamus nobis odit optio non earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum asperiores provident excepturi fugit et cumque natus ratione? Nam fugiat perspiciatis molestiae provident perferendis animi aliquam tempore, reiciendis, dolorum, porro molestias. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam eius quasi sit soluta, consequuntur aliquam magnam fugiat nesciunt itaque suscipit, dolorum est nulla in ullam nobis fuga? Cumque atque, impedit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Choice -->
+
+    <!-- Start Aim -->
+    <section class="banner-bg bg-white py-5">
+        <div class="container my-4">
+            <div class="row text-center">
+
+                <div class="objective col-lg-3 mt-sm-0 mt-4">
+                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                        <i class="display-4 bx bxs-bulb text-light"></i>
+                    </div>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Misión</h2>
+                    <p class="light-300">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet dicta sunt consectetur harum, iste quae qui commodi officiis explicabo ea debitis voluptas itaque reiciendis, dolorum cumque delectus officia! Doloribus, modi.
+                    </p>
+                </div>
+
+                <div class="objective col-lg-3 mt-sm-0 mt-4">
+                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                        <i class='display-4 bx bx-revision text-light'></i>
+                    </div>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Visión</h2>
+                    <p class="light-300">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quaerat, eos totam asperiores illo quam praesentium. Facilis quo vitae deserunt expedita doloremque cumque, distinctio excepturi laboriosam adipisci dolor omnis, doloribus.
+                    </p>
+                </div>
+
+                
+                <div class="objective col-lg-3 mt-sm-0 mt-4">
+                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                        <i class="display-4 bx bxs-select-multiple text-light"></i>
+                    </div>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Objetivo</h2>
+                    <p class="light-300">
+                        Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Sequi beatae architecto doloribus quaerat dolorem voluptatum dicta, laudantium! Exercitationem at iste modi magnam error facere perspiciatis repellat, molestiae magni et autem!
+                    </p>
+                </div>
+
+                <div class="objective col-lg-3 mt-sm-0 mt-4">
+                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                        <i class="display-4 bx bxs-bulb text-light"></i>
+                    </div>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Funciones</h2>
+                    <p class="light-300">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus laudantium beatae, aut distinctio corporis sit ratione maxime harum aliquam ea nihil tempora deleniti non voluptatum maiores veniam provident dolores, ad.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Aim -->
+
+    <!-- Start Footer -->
+    <footer class="bg-secondary pt-2">
+
+        <div class="w-100 bg-primary py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 SmartMind. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Templatemo -->
+    <script src="{% static 'js/templatemo.js' %}"></script>
+    <!-- Custom -->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>
