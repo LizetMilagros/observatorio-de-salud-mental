@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="{% static 'css/templatemo.css' %}">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <style>
+    .u {
+      font-size: 16px;
+      text-decoration: underline;
+      color: blue;
+    }
+    
+    </style>
 <!--
     
 TemplateMo 561 Purple Buzz
@@ -28,6 +36,7 @@ https://templatemo.com/tm-561-purple-buzz
 
 <body>
     <!-- Header -->
+
     <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
         <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand h1" href="{% url 'inicio' %}">
@@ -45,7 +54,7 @@ https://templatemo.com/tm-561-purple-buzz
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'inicio' %}">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'clasificacion' %}">Clasificación</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="">Trastornos mentales</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'nosotros' %}">Nosotros</a>
@@ -76,7 +85,7 @@ https://templatemo.com/tm-561-purple-buzz
                 <div class="col-lg-6 text-start">
                     <h1 class="h2 py-5 text-primary typo-space-line">Sobre Nosotros</h1>
                     <p class="light-300">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam mollitia quibusdam voluptas perspiciatis ea suscipit nisi, iure, tempore accusantium placeat, sunt delectus nobis beatae ipsa voluptatum repellat odio! Modi, incidunt.
+                        Nuestro observatorio de Saluda mental es una iniciativa de servicio a la cominidada en relacion con la infromacion y educacion de las enfermedades mentales que anualmente en promedio, el 20,7% de la población mayor de 12 años de edad padece algún tipo de trastorno mental.
                     </p>
                 </div>
                 <div class="col-lg-6">
@@ -95,38 +104,42 @@ https://templatemo.com/tm-561-purple-buzz
             <div class="col-lg-3">
                 <h2 class="h2 py-5 typo-space-line">¿Quiénes Somos?</h2>
                 <p class="text-muted light-300">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <b>SmartMind</b>, es un grupo conformados por estudiantes de la Universidad Nacional de san Agustin - Arequipa.
                 </p>
             </div>
 
             <div class="col-lg-9 row">
+
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>Kevin Ccorimanya</li>
-                        <li>kccorimanya@unsa.edu.pe</li>
+                        <li>KEVIN YUNIOR CCORIMANYA PAUCAR</li>
+                        <li>Business Development</li>
+                        <u class="u">kccorimanya@unsa.edu.pe</u>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>Fidel Chavez</li>
-                        <li>fchavezcar@unsa.edu.pe</li>
+                        <li>FIDEL RONALDO CHAVEZ CARPIO</li>
+                        <li>Media Development</li>
+                        <u class="u">fchavezcar@unsa.edu.pe</u>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-2.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>Lizet Cuevas</li>
-                        <li>lcuevas@unsa.edu.pe</li>
+                        <li>LIZET MILAGROS CUEVAS MAMANI</li>
+                        <li>Developer</li>
+                        <u class="u">lcuevas@unsa.edu.pe</u>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>Luis Valdivia</li>
-                        <li>lvaldiviatu@unsa.edu.pe</li>
+                        <li>LUIS DIEGO VALDIVIA TURPO</li>
+                        <li>Developer</li>
+                        <u class="u">lvaldiviatu@unsa.edu.pe</u>
                     </ul>
                 </div>
             </div>
@@ -143,29 +156,33 @@ https://templatemo.com/tm-561-purple-buzz
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>Gilbert Ramos</li>
-                        <li>gramosti@unsa.edu.pe</li>
+                        <li>GILBERT WIL RAMOS TICONA</li>
+                        <li>Business Development</li>
+                        <u class="u">gramosti@unsa.edu.pe</u>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-2.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>Indira Hancco</li>
-                        <li>ihancco@unsa.edu.pe</li>
+                        <li>INDIRA PAOLA HANCCO ZARAVIA</li>
+                        <li>Media Development</li>
+                        <u class="u">ihancco@unsa.edu.pe</u>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>Ayrton Garcia</li>
-                        <li>agarciapu@unsa.edu.pe</li>
+                        <li>AYRTON ROBINS GARCIA PUMA</li>
+                        <li>Developer</li>
+                        <u class="u">agarciapu@unsa.edu.pe</u>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>Jeremy Cruz</li>
-                        <li>jcruzga@unsa.edu.pe</li>
+                        <li>JEREMY JEISON CRUZ GALLEGOS</li>
+                        <li>Developer</li>
+                        <u class="u">jcruzga@unsa.edu.pe</u>
                     </ul>
                 </div>
             </div>
@@ -177,7 +194,7 @@ https://templatemo.com/tm-561-purple-buzz
     <!-- Start Our Partner -->
     <section class="bg-secondary py-1">
         <div class="container py-1">
-            <h2 class="h2 text-white text-center py-4">Más Información</h2>
+            <h2 class="h2 text-white text-center py-5">Más Información</h2>
             
         </div>
     </section>
@@ -193,7 +210,7 @@ https://templatemo.com/tm-561-purple-buzz
                 <div class="banner-content col-lg-7 align-self-end">
                     <h2 class="h2 pb-3">¿Por qué necesitamos un observatorio de salud mental?</h2>
                     <p class="text-muted pb-5 light-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati blanditiis beatae dignissimos voluptas sit libero veritatis autem eos, praesentium similique impedit reiciendis officia possimus accusamus nobis odit optio non earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum asperiores provident excepturi fugit et cumque natus ratione? Nam fugiat perspiciatis molestiae provident perferendis animi aliquam tempore, reiciendis, dolorum, porro molestias. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam eius quasi sit soluta, consequuntur aliquam magnam fugiat nesciunt itaque suscipit, dolorum est nulla in ullam nobis fuga? Cumque atque, impedit.</p>
+                    El Observatorio de Salud Mental nos ofrece un extenso conjunto de datos acerca de la asistencia a la salud mental en cada una de las comunidades autónomas. Estos datos no sólo nos permiten conocer la realidad de la asistencia a la salud, sino que nos permiten conocer su evolución y la posibilidad de hacer valoraciones de esta realidad en función de indicadores de calidad asistencial, como la misma Estrategia de Salud Mental establece como objetivo.</p>
                 </div>
             </div>
         </div>
@@ -209,30 +226,9 @@ https://templatemo.com/tm-561-purple-buzz
                     <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
                         <i class="display-4 bx bxs-bulb text-light"></i>
                     </div>
-                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Objetivo</h2>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Misión</h2>
                     <p class="light-300">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet dicta sunt consectetur harum, iste quae qui commodi officiis explicabo ea debitis voluptas itaque reiciendis, dolorum cumque delectus officia! Doloribus, modi.
-                    </p>
-                </div>
-
-                <div class="objective col-lg-3 mt-sm-0 mt-4">
-                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
-                        <i class="display-4 bx bxs-select-multiple text-light"></i> 
-                    </div>
-                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Funciones</h2>
-                    <p class="light-300">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quaerat, eos totam asperiores illo quam praesentium. Facilis quo vitae deserunt expedita doloremque cumque, distinctio excepturi laboriosam adipisci dolor omnis, doloribus.
-                    </p>
-                </div>
-
-                
-                <div class="objective col-lg-3 mt-sm-0 mt-4">
-                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
-                        <i class="display-4 bx bxs-bulb text-light"></i>
-                    </div>
-                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Motivo</h2>
-                    <p class="light-300">
-                        Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Sequi beatae architecto doloribus quaerat dolorem voluptatum dicta, laudantium! Exercitationem at iste modi magnam error facere perspiciatis repellat, molestiae magni et autem!
+                        Desarrollar un sistema permanente que brinde información válida, actualizada y amigable de los trastornos mentales para el público en general.
                     </p>
                 </div>
 
@@ -240,9 +236,30 @@ https://templatemo.com/tm-561-purple-buzz
                     <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
                         <i class='display-4 bx bx-revision text-light'></i>
                     </div>
-                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Alcance</h2>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Visión</h2>
                     <p class="light-300">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus laudantium beatae, aut distinctio corporis sit ratione maxime harum aliquam ea nihil tempora deleniti non voluptatum maiores veniam provident dolores, ad.
+                        Queremos que el observatorio de salud mental se consolide como el principal referente del país en la sistematización de la información y la producción de conocimiento en materia de enfermedades mentales.
+                    </p>
+                </div>
+
+                
+                <div class="objective col-lg-3 mt-sm-0 mt-4">
+                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                        <i class="display-4 bx bxs-select-multiple text-light"></i>
+                    </div>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Objetivo</h2>
+                    <p class="light-300">
+                        Facilitar la divulgación de información adecuada acerca de las enfermedades mentales y que estas esté avalada por expertos.
+                    </p>
+                </div>
+
+                <div class="objective col-lg-3 mt-sm-0 mt-4">
+                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                        <i class="display-4 bx bxs-bulb text-light"></i>
+                    </div>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Funciones</h2>
+                    <p class="light-300">
+                        Se recabara información sobre trastornos mentales, tanbien permitirá el análisis de latendencia y distribución de los indicadores de Salud mental y de sus efectossobre la salud, la educación y la población general.
                     </p>
                 </div>
 
