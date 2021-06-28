@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Observatorio de Salud Mental</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{% static 'img/apple-icon.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <!-- Load Require CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="{% static 'css/boxicon.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="{% static 'css/templatemo.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+
+    <!--Grafico-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!--
+    
+TemplateMo 561 Purple Buzz
+
+https://templatemo.com/tm-561-purple-buzz
+
+-->
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="{% url 'inicio' %}">
+                <i class='bx bxs-home-heart bx-sm text-dark'></i>
+                <span class="text-dark h4">Smart</span> <span class="text-primary h4">Mind</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'inicio' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'clasificacion' %}">Clasificación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'nosotros' %}">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'suscripcion' %}">Suscribete</a>
+                        </li>
+                        <!--<li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">Contact</a>
+                        </li>-->
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" href="#"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i></a>
+                    <a class="nav-link" href="#"><i class='bx bx-cog bx-sm text-primary'></i></a>
+                    <a class="nav-link" href="#"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <section class="bg-secondary py-1">
+        <div class="container py-1">
+            <h2 class="h2 text-white text-center py-1">Clasificación de enfermedades mentales en el Perú</h2>
+        </div>
+    </section>
+
+    <!-- Start Banner Hero -->
+    <section class="bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center justify-content-between">
+                <div class="contact-header col-lg-3">
+                    <div id="container"></div>
+                </div>
+                <div class="contact-img col-lg-8 align-items-end col-md-12">
+                    
+                    <table class="table">
+                        <thead class = "thead-light">
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Trastorno mental</th>
+                                <th scope="col">Hombres</th>
+                                <th scope="col">Mujeres</th>
+                                <th scope="col">Total de pacientes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th data-title="No." scope="row">1</th>
+                                <th data-title="Trastorno mental" scope="row">Ansiedad</th>
+                                <th data-title="Hombres" scope="row">520</th>
+                                <th data-title="Mujeres" scope="row">800</th>
+                                <th data-title="Total de pacientes" scope="row">1320</th>
+                            </tr>
+                            <tr>
+                                <th data-title="No." scope="row">2</th>
+                                <th data-title="Trastorno mental" scope="row">Violencia familiar/maltrato infantil</th>
+                                <th data-title="Hombres" scope="row">520</th>
+                                <th data-title="Mujeres" scope="row">800</th>
+                                <th data-title="Total de pacientes" scope="row">1320</th>
+                            </tr>
+                            <tr>
+                                <th data-title="No." scope="row">3</th>
+                                <th data-title="Trastorno mental" scope="row">Trastorno depresivo</th>
+                                <th data-title="Hombres" scope="row">520</th>
+                                <th data-title="Mujeres" scope="row">800</th>
+                                <th data-title="Total de pacientes" scope="row">1320</th>
+                            </tr>
+                            <tr>
+                                <th data-title="No." scope="row">4</th>
+                                <th data-title="Trastorno mental" scope="row">Trastorno del comportamiento</th>
+                                <th data-title="Hombres" scope="row">520</th>
+                                <th data-title="Mujeres" scope="row">800</th>
+                                <th data-title="Total de pacientes" scope="row">1320</th>
+                            </tr>
+                            <tr>
+                                <th data-title="No." scope="row">5</th>
+                                <th data-title="Trastorno mental" scope="row">Trastorno de consumo de alcohol</th>
+                                <th data-title="Hombres" scope="row">520</th>
+                                <th data-title="Mujeres" scope="row">800</th>
+                                <th data-title="Total de pacientes" scope="row">1320</th>
+                            </tr>
+                            <tr>
+                                <th data-title="No." scope="row">6</th>
+                                <th data-title="Trastorno mental" scope="row">Intento de suicidio</th>
+                                <th data-title="Hombres" scope="row">520</th>
+                                <th data-title="Mujeres" scope="row">800</th>
+                                <th data-title="Total de pacientes" scope="row">1320</th>
+                            </tr>
+                            <tr>
+                                <th data-title="No." scope="row">7</th>
+                                <th data-title="Trastorno mental" scope="row">Trastornos alimentarios (Anorexia, Bulimia)</th>
+                                <th data-title="Hombres" scope="row">520</th>
+                                <th data-title="Mujeres" scope="row">800</th>
+                                <th data-title="Total de pacientes" scope="row">1320</th>
+                            </tr>
+                            <tr>
+                                <th data-title="No." scope="row">8</th>
+                                <th data-title="Trastorno mental" scope="row">Trastorno de consumo de otras drogas</th>
+                                <th data-title="Hombres" scope="row">520</th>
+                                <th data-title="Mujeres" scope="row">800</th>
+                                <th data-title="Total de pacientes" scope="row">1320</th>
+                            </tr>
+                            <tr>
+                                <th data-title="No." scope="row">9</th>
+                                <th data-title="Trastorno mental" scope="row">Síndrome y/o trastorno psicótico</th>
+                                <th data-title="Hombres" scope="row">520</th>
+                                <th data-title="Mujeres" scope="row">800</th>
+                                <th data-title="Total de pacientes" scope="row">1320</th>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Hero -->
+
+
+    <!-- Start Footer -->
+    <footer class="bg-secondary pt-2">
+        
+        <div class="w-100 bg-primary py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 SmartMind. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Templatemo -->
+    <script src="{% static 'js/templatemo.js' %}"></script>
+    <!-- Custom -->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+    <!--Grafico circular-->
+    
+</body>
+
+</html>

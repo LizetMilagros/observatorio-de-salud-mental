@@ -11,3 +11,6 @@ def nosotros(request):
 
 def suscripcion(request):
 	return render(request, 'suscripcion.html')
+
+def clasificacion(request):
+	return render(request, 'clasificacion.html')
