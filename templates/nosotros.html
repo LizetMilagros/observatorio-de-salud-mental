@@ -25,13 +25,7 @@
     }
     
     </style>
-<!--
-    
-TemplateMo 561 Purple Buzz
 
-https://templatemo.com/tm-561-purple-buzz
-
--->
 </head>
 
 <body>
@@ -40,7 +34,7 @@ https://templatemo.com/tm-561-purple-buzz
     <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
         <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand h1" href="{% url 'inicio' %}">
-                <i class='bx bx-buildings bx-sm text-dark'></i>
+                <i class='bx bxs-home-heart bx-sm text-dark'></i>
                 <span class="text-dark h4">Smart</span> <span class="text-primary h4">Mind</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +48,7 @@ https://templatemo.com/tm-561-purple-buzz
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'inicio' %}">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="">Trastornos mentales</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'clasificacion' %}">Clasificación</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'nosotros' %}">Nosotros</a>
@@ -62,15 +56,28 @@ https://templatemo.com/tm-561-purple-buzz
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'suscripcion' %}">Suscribete</a>
                         </li>
-                        <!--<li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">Contact</a>
-                        </li>-->
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
-                    <a class="nav-link" href="#"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i></a>
-                    <a class="nav-link" href="#"><i class='bx bx-cog bx-sm text-primary'></i></a>
-                    <a class="nav-link" href="#"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="coul-md-12 search">
+                                <form method="get">
+                                    <div id="custom-search-input">
+                                        <div class="input-group col-md-12 ">
+                                            <input type="text" class="form-control" placeholder="Buscar..." name="Buscar">
+                                                <span class="input-group-list">
+                                                    <i class="icon icon-search"></i>              
+                                                    <button type="submit" class="btn btn-secondary text-white btn rounded-pill rounded-start rounded-end px-lg-3"><i class='bx bx-search bx-sm bx-tada-hover'></i></button>
+                                                </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -85,7 +92,7 @@ https://templatemo.com/tm-561-purple-buzz
                 <div class="col-lg-6 text-start">
                     <h1 class="h2 py-5 text-primary typo-space-line">Sobre Nosotros</h1>
                     <p class="light-300">
-                        Nuestro observatorio de Saluda mental es una iniciativa de servicio a la cominidada en relacion con la infromacion y educacion de las enfermedades mentales que anualmente en promedio, el 20,7% de la población mayor de 12 años de edad padece algún tipo de trastorno mental.
+                        Nuestro observatorio de Salud mental es una iniciativa de servicio a la comunidad en relación con la información y educación de las enfermedades mentales que anualmente en promedio, el 20.7% de la población mayor de 12 años de edad padece de algún tipo de trastorno mental.
                     </p>
                 </div>
                 <div class="col-lg-6">
@@ -104,7 +111,7 @@ https://templatemo.com/tm-561-purple-buzz
             <div class="col-lg-3">
                 <h2 class="h2 py-5 typo-space-line">¿Quiénes Somos?</h2>
                 <p class="text-muted light-300">
-                    <b>SmartMind</b>, es un grupo conformados por estudiantes de la Universidad Nacional de san Agustin - Arequipa.
+                    <b>SmartMind</b>, es un grupo conformado por estudiantes de la Universidad Nacional de San Agustin - Arequipa.
                 </p>
             </div>
 
@@ -113,32 +120,28 @@ https://templatemo.com/tm-561-purple-buzz
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>KEVIN YUNIOR CCORIMANYA PAUCAR</li>
-                        <li>Business Development</li>
+                        <li>Kevin Yunior Ccorimanya Paucar</li>
                         <u class="u">kccorimanya@unsa.edu.pe</u>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>FIDEL RONALDO CHAVEZ CARPIO</li>
-                        <li>Media Development</li>
+                        <li>Fidel Ronaldo Chavez Carpio</li>
                         <u class="u">fchavezcar@unsa.edu.pe</u>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-2.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>LIZET MILAGROS CUEVAS MAMANI</li>
-                        <li>Developer</li>
+                        <li>Lizet Milagros Cuevas Mamani</li>
                         <u class="u">lcuevas@unsa.edu.pe</u>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>LUIS DIEGO VALDIVIA TURPO</li>
-                        <li>Developer</li>
+                        <li>Luis Diego Valdivia Turpo</li>
                         <u class="u">lvaldiviatu@unsa.edu.pe</u>
                     </ul>
                 </div>
@@ -156,32 +159,28 @@ https://templatemo.com/tm-561-purple-buzz
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>GILBERT WIL RAMOS TICONA</li>
-                        <li>Business Development</li>
+                        <li>Gilbert Wil Ramos Ticona</li>
                         <u class="u">gramosti@unsa.edu.pe</u>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-2.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>INDIRA PAOLA HANCCO ZARAVIA</li>
-                        <li>Media Development</li>
+                        <li>Indira Paola Hancco Zaravia</li>
                         <u class="u">ihancco@unsa.edu.pe</u>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>AYRTON ROBINS GARCIA PUMA</li>
-                        <li>Developer</li>
+                        <li>Ayrton Robins Garcia Puma</li>
                         <u class="u">agarciapu@unsa.edu.pe</u>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="{% static 'img/team-1.jpg' %}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>JEREMY JEISON CRUZ GALLEGOS</li>
-                        <li>Developer</li>
+                        <li>Jeremy Jeison Cruz Gallegos</li>
                         <u class="u">jcruzga@unsa.edu.pe</u>
                     </ul>
                 </div>
@@ -249,7 +248,7 @@ https://templatemo.com/tm-561-purple-buzz
                     </div>
                     <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Objetivo</h2>
                     <p class="light-300">
-                        Facilitar la divulgación de información adecuada acerca de las enfermedades mentales y que estas esté avalada por expertos.
+                        Facilitar la divulgación de información adecuada acerca de las enfermedades mentales y que esta esté avalada por expertos.
                     </p>
                 </div>
 
@@ -259,7 +258,7 @@ https://templatemo.com/tm-561-purple-buzz
                     </div>
                     <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Funciones</h2>
                     <p class="light-300">
-                        Se recabara información sobre trastornos mentales, tanbien permitirá el análisis de latendencia y distribución de los indicadores de Salud mental y de sus efectossobre la salud, la educación y la población general.
+                        Se recabará información sobre trastornos mentales, también permitirá el análisis de la tendencia y distribución de los indicadores de Salud mental y de sus efectos sobre la salud, la educación y la población general.
                     </p>
                 </div>
 

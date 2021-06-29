@@ -24,13 +24,7 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-<!--
-    
-TemplateMo 561 Purple Buzz
 
-https://templatemo.com/tm-561-purple-buzz
-
--->
 </head>
 
 <body>
@@ -60,15 +54,28 @@ https://templatemo.com/tm-561-purple-buzz
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'suscripcion' %}">Suscribete</a>
                         </li>
-                        <!--<li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">Contact</a>
-                        </li>-->
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
-                    <a class="nav-link" href="#"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i></a>
-                    <a class="nav-link" href="#"><i class='bx bx-cog bx-sm text-primary'></i></a>
-                    <a class="nav-link" href="#"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="coul-md-12 search">
+                                <form method="get">
+                                    <div id="custom-search-input">
+                                        <div class="input-group col-md-12 ">
+                                            <input type="text" class="form-control" placeholder="Buscar..." name="Buscar">
+                                                <span class="input-group-list">
+                                                    <i class="icon icon-search"></i>              
+                                                    <button type="submit" class="btn btn-secondary text-white btn rounded-pill rounded-start rounded-end px-lg-3"><i class='bx bx-search bx-sm bx-tada-hover'></i></button>
+                                                </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
