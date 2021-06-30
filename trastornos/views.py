@@ -29,6 +29,15 @@ def suscripcion(request):
 		return render(request, 'nosotros.html')
 	if(queryset=="trastornos"):
 		return render(request, 'clasificacion.html')
+
+	if request.method == 'POST':
+		nombre= request.POST["nombre"]
+		print(nombre)
+		email= request.POST["email"]
+		print(email)
+		if nombre:
+			if email:
+				return render(request, 'inicio.html')
 	return render(request, 'suscripcion.html')
 
 def clasificacion(request):

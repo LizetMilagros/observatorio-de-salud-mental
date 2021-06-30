@@ -83,23 +83,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6  my-4 p-3">
-                    <form action="#" method="get"><h1 class="h2 text-center">Manténgase al día con nosotros</h1>
-                    <p class="text-center light-300">Déjanos tu correo electrónico y nombre para suscribirte. Te avisaremos de las novedades.</p>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        <h1 class="h2 text-center">Manténgase al día con nosotros</h1>
+                        <p class="text-center light-300">Déjanos tu correo electrónico y nombre para suscribirte. Te avisaremos de las novedades.</p>
 
-                    <div class="input-group py-3">
-                        <input name="nombre" type="text" class="form-control form-control-lg rounded-pill" id="nombre" placeholder="Tu nombre" aria-label="Your Nombre">
-                    </div>
-                    
-                    <div class="input-group py-3">
-                        <input name="email" type="text" class="form-control form-control-lg rounded-pill rounded-end" id="email"  placeholder="Tu correo electrónico" aria-label="Your Email">
-                        <button class="btn btn-secondary text-white btn-lg rounded-pill rounded-start px-lg-3" type="submit">Suscribete</button>
-                    </div>
-                    
-                    <hr>
+                        <div class="input-group py-3">
+                            <input name="nombre" type="text" class="form-control form-control-lg rounded-pill" id="Nombre" placeholder="Tu nombre" aria-label="Your Nombre">
+                        </div>
+                        
+                        <div class="input-group py-3">
+                            <input name="email" type="text" class="form-control form-control-lg rounded-pill rounded-end" id="Email"  placeholder="Tu correo electrónico" aria-label="Your Email">
+                            <button class="btn btn-secondary text-white btn-lg rounded-pill rounded-start px-lg-3" type="submit">Suscribete</button>
+                        </div>
+                        
+                        <hr>
                     </form>
+
+
                     <div class="input-group py-3" style="">
                         <div class="gmail">
-                            <a href="{% provider_login_url 'google' %}" class="banner-button btn rounded-pill btn-outline-primary btn-lg px-4" role="button"><i class='bx bx-user-circle bx-sm text-primary'></i> Suscribirse con Google</a>
+                            <a href="{% provider_login_url 'google' %}" class="banner-button btn rounded-pill btn-outline-primary btn-lg px-4" role="button"><i class='bx bx-user-circle bx-sm'></i> Suscribirse con Google</a>
                         </div>
                     </div>
                 </div>

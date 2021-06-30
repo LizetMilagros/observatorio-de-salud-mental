@@ -32,10 +32,10 @@ Highcharts.chart('container', {
             colorByPoint: true,
             data: [{
                 name: 'Mujeres',
-                y: 63
+                y: 65.07
             }, {
                 name: 'Hombres',
-                y: 37
+                y: 34.93
             }]
         }]
     });
