@@ -89,8 +89,25 @@
                         <h1 class="h2 text-center">Manténgase al día con nosotros</h1>
                         <p class="text-center light-300">Déjanos tu correo electrónico y nombre para suscribirte. Te avisaremos de las novedades.</p>
 
+                        
+
+                        {% if user.is_authenticated %}
+                        <div class="alert alert-success" role="alert">
+                            {{user.username}} , gracias por suscribirte!
+                        </div>
+                        {% else %}
+                            {% if messages %}
+                            {% for message in messages %}
+                            <div class="alert alert-success" role="alert">
+                            {{ message }}
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                        {% endif %}
+                        
                         <div class="input-group py-3">
                             <input name="nombre" type="text" class="form-control form-control-lg rounded-pill" id="Nombre" placeholder="Tu nombre" aria-label="Your Nombre">
+                            
                         </div>
                         
                         <div class="input-group py-3">

@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
+from django.contrib import messages
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -30,15 +32,23 @@ def suscripcion(request):
 	if(queryset=="trastornos"):
 		return render(request, 'clasificacion.html')
 
+	#registrar usuarios
 	if request.method == 'POST':
-		nombre= request.POST["nombre"]
-		print(nombre)
-		email= request.POST["email"]
-		print(email)
-		if nombre:
-			if email:
-				return render(request, 'inicio.html')
-	return render(request, 'suscripcion.html')
+		username = request.POST['nombre']
+		email = request.POST['email']
+
+		if User.objects.filter(email=email).exists():
+			messages.info(request, 'Usted ya esta suscrito')
+			return redirect('suscripcion')
+
+		else:
+			user = User.objects.create_user(username=username, email=email)
+			messages.info(request, f'{username}, gracias por suscribirte!')
+			user.save()
+			return redirect('suscripcion')
+	else:
+		return render(request, 'suscripcion.html')
+
 
 def clasificacion(request):
 	queryset= request.GET.get("Buscar")
