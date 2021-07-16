@@ -46,6 +46,12 @@ def suscripcion(request):
 			messages.info(request, f'{username}, gracias por suscribirte!')
 			user.save()
 			return redirect('suscripcion')
+
+	elif request.user.is_authenticated:
+		context = request.user.email
+		
+		return render(request, 'suscripcion.html')
+
 	else:
 		return render(request, 'suscripcion.html')
 
