@@ -9,3 +9,21 @@ https://templatemo.com/tm-561-purple-buzz
 .input-group .gmail .btn {
 	left: 120px;
 }
+
+
+/*
+Ajustes para el mapa de Calor
+*/
+
+.mapaCont path{
+    fill: #00394f;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.mapaCont path:hover{
+    opacity: 0.8;
+    transition: 1s;
+    cursor: pointer;
+}
+
