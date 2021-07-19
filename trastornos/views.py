@@ -8,7 +8,6 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from django.template.loader import render_to_string
-from trastornos.models import Tamizajes
 
 
 def inicio(request):
@@ -93,15 +92,3 @@ def clasificacion(request):
 
 def prueba(request):
 	return render(request, 'mensaje.html')
-
-def mapaCalor(request):
-	queryset= request.GET.get("Buscar")
-	print(queryset)
-	if(queryset=="nosotros"):
-		return render(request, 'nosotros.html')
-		
-	if(queryset=="trastornos"):
-		return render(request, 'clasificacion.html')
-
-	casos = Tamizajes.objects.all()
-	return render(request, 'mapaCalor.html',{"casos":casos})
