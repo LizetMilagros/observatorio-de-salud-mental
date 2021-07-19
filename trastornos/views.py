@@ -3,7 +3,12 @@ from django.views.generic import TemplateView
 from django.contrib import messages
 from django.contrib.auth.models import User
 
-# Create your views here.
+from django.conf import settings
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from django.template.loader import render_to_string
+
 
 def inicio(request):
 	queryset= request.GET.get("Buscar")
@@ -32,7 +37,7 @@ def suscripcion(request):
 	if(queryset=="trastornos"):
 		return render(request, 'clasificacion.html')
 
-	#registrar usuarios
+	#registrar usuarios por formulario
 	if request.method == 'POST':
 		username = request.POST['nombre']
 		email = request.POST['email']
@@ -45,15 +50,34 @@ def suscripcion(request):
 			user = User.objects.create_user(username=username, email=email)
 			messages.info(request, f'{username}, gracias por suscribirte!')
 			user.save()
+			
+			# Establecemos conexion con el servidor smtp de gmail
+			mailServer = smtplib.SMTP(settings.EMAIL_HOST, settings.EMAIL_PORT)
+			mailServer.ehlo()
+			mailServer.starttls()
+			mailServer.ehlo()
+			mailServer.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
+
+			# Construimos el mensaje
+			mensaje = MIMEMultipart()
+			mensaje['From']=settings.EMAIL_HOST_USER
+			mensaje['To']=email
+			mensaje['Subject']="Suscripcion a SmartMind"
+
+			content = render_to_string('mensaje.html', {'user': username})
+			# Adjuntamos el texto
+			mensaje.attach(MIMEText(content, 'html'))
+			# Envio del mensaje
+			mailServer.sendmail(settings.EMAIL_HOST_USER,
+			                email,
+			                mensaje.as_string())
+
 			return redirect('suscripcion')
 
-	elif request.user.is_authenticated:
-		context = request.user.email
-		
-		return render(request, 'suscripcion.html')
+	#elif request.user.is_authenticated:
+		#context = request.user.email
 
-	else:
-		return render(request, 'suscripcion.html')
+	return render(request, 'suscripcion.html')
 
 
 def clasificacion(request):
@@ -64,3 +88,7 @@ def clasificacion(request):
 	if(queryset=="trastornos"):
 		return render(request, 'clasificacion.html')
 	return render(request, 'clasificacion.html')
+
+
+def prueba(request):
+	return render(request, 'mensaje.html')
