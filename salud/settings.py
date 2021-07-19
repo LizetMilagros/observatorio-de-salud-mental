@@ -156,10 +156,3 @@ LOGIN_REDIRECT_URL = 'suscripcion'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_LOGOUT_ON_GET = True
-
-#envio de correo
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'smartmindSalud77@gmail.com'
-EMAIL_HOST_PASSWORD = 'smartmind77'
