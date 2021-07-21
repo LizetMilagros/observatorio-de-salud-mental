@@ -1,0 +1,232 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Observatorio de Salud Mental</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{% static 'img/apple-icon.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <!-- Load Require CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="{% static 'css/boxicon.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="{% static 'css/templatemo.css' %}">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="{% url 'inicio' %}">
+                <i class='bx bxs-home-heart bx-sm text-dark'></i>
+                <span class="text-dark h5">Smart</span> <span class="text-primary h5">Mind</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-9 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'inicio' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'clasificacion' %}">Clasificación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'nosotros' %}">Nosotros</a>
+                        </li>
+                            
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'noticias' %}">Noticias</a>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'suscripcion' %}">Suscribete</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="navbar align-center d-flex mx-xl-1">
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="coul-md-12 search">
+                                <form method="get">
+                                    <div id="custom-search-input">
+                                        <div class="input-group col-md-12 ">
+                                            <input type="text" class="form-control" placeholder="Buscar..." name="Buscar">
+                                                <span class="input-group-list">
+                                                    <i class="icon icon-search"></i>              
+                                                    <button type="submit" class="btn btn-secondary text-white btn rounded-pill rounded-start rounded-end px-lg-3"><i class='bx bx-search bx-sm bx-tada-hover'></i></button>
+                                                </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Start Banner Hero -->
+    <div id="depresivo" class="bg-light w-100">
+        <div class="container-fluid text-light d-flex justify-content-center align-items-center border-0 rounded-0 p-0 py-5">
+            <div class="banner-content col-lg-8 m-lg-auto text-center py-5 px-3">
+                <h1 class="banner-heading h2 pb-5 typo-space-line-center">Trastorno depresivo</<h1>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!-- End Banner Hero -->
+
+    <!-- Start Work Sigle -->
+    <section class="container py-5">
+
+        <div class="row pt-5">
+            <div class="worksingle-content col-lg-8 m-auto text-left justify-content-center pb-5">
+                <h2 class="worksingle-heading h3 pb-3 typo-space-line">Trastorno depresivo</h2>
+                <p class="worksingle-footer py-3 text-muted 0">
+                    La depresión es un trastorno emocional que causa un sentimiento de tristeza constante y una pérdida de interés en realizar diferentes actividades. También denominada «trastorno depresivo mayor» o «depresión clínica», afecta los sentimientos, los pensamientos y el comportamiento de una persona, y puede causar una variedad de problemas físicos y emocionales. Es posible que tengas dificultades para realizar las actividades cotidianas y que, a veces, sientas que no vale la pena vivir.
+                    <br>
+                    Más que solo una tristeza pasajera, la depresión no es una debilidad y uno no puede recuperarse de la noche a la mañana de manera sencilla. La depresión puede requerir tratamiento a largo plazo. Pero no te desanimes. La mayoría de las personas con depresión se sienten mejor con medicamentos, con psicoterapia o con ambos.
+                </p>
+                <h3>Causas</h3>
+                <p>Se desconoce la causa exacta de la depresión. Al igual que sucede con muchos trastornos mentales, puede comprender diversos factores, como:</p>
+                    <ul>
+                        <li><b>Diferencias biológicas.</b> Las personas con depresión tienen cambios físicos en el cerebro. La importancia de estos cambios aún es incierta, pero con el tiempo pueden ayudar a identificar las causas.</li>
+                        <li><b>Química del cerebro.</b> Los neurotransmisores son sustancias químicas que se encuentran naturalmente en el cerebro y que probablemente desempeñan un rol en la depresión. Las investigaciones recientes indican que los cambios en la función y el efecto de estos neurotransmisores, y cómo interactúan con los neurocircuitos involucrados en mantener la estabilidad del estado de ánimo pueden tener un rol importante en la depresión y su tratamiento.</li>
+                        <li><b>Hormonas.</b> Es posible que los cambios en el equilibrio hormonal del cuerpo tengan un rol al causar o desencadenar la depresión. Los cambios hormonales pueden presentarse en el embarazo y durante las semanas o meses después del parto (posparto), y por problemas de tiroides, menopausia u otros trastornos.</li>
+                        <li><b>Rasgos hereditarios.</b> La depresión es más frecuente en las personas cuyos parientes consanguíneos también tienen este trastorno. Los investigadores están buscando genes que puedan intervenir en el origen de la depresión.</li>
+                    </ul>
+                
+                <h3>Síntomas</h3>
+                <p>Si bien la depresión puede producirse solamente una vez en la vida; por lo general, las personas tienen varios episodios de depresión. Durante estos episodios, los síntomas se producen durante gran parte del día, casi todos los días y pueden consistir en:</p>
+                <ul>
+                    <li>Sentimientos de tristeza, ganas de llorar, vacío o desesperanza</li>
+                    <li>Arrebatos de enojo, irritabilidad o frustración, incluso por asuntos de poca importancia</li>
+                    <li>Pérdida de interés o placer por la mayoría de las actividades habituales o todas, como las relaciones sexuales, los pasatiempos o los deportes</li>
+                    <li>Alteraciones del sueño, como insomnio o dormir demasiado</li>
+                    <li>Cansancio y falta de energía, por lo que incluso las tareas pequeñas requieren un esfuerzo mayor</li>
+                    <li>Falta de apetito y adelgazamiento, o más antojos de comida y aumento de peso</li>
+                    <li>Ansiedad, agitación o inquietud</li>
+                    <li>Lentitud para razonar, hablar y hacer movimientos corporales</li>
+                    <li>Sentimientos de inutilidad o culpa, fijación en fracasos del pasado o autorreproches</li>
+                    <li>Dificultad para pensar, concentrarse, tomar decisiones y recordar cosas</li>
+                    <li>Pensamientos frecuentes o recurrentes sobre la muerte, pensamientos suicidas, intentos suicidas o suicidio</li>
+                    <li>Problemas físicos inexplicables, como dolor de espalda o de cabeza</li>
+                </ul>
+                <h3>Prevención</h3>
+                <p>No existe una manera segura para evitar la depresión. Sin embargo, las siguientes estrategias pueden ser útiles</p>
+                <ul>
+                    <li><b>Toma medidas para controlar el estrés,</b> mejorar tu resiliencia y levantar tu autoestima.</li>
+                    <li><b>Acércate a la familia y a los amigos,</b> especialmente en momentos de crisis, para que te ayuden a superar los malos tiempos.</li>
+                    <li><b>Consigue tratamiento ante el primer signo de un problema </b> para que te ayude a impedir que la depresión empeore.</li>
+                    <li><b>Considera tener tratamiento de apoyo de larga duración</b> para que te ayude a prevenir la reaparición de los síntomas.</li>
+                </ul>
+                
+                <p><b>Fuente: </b><a href="https://www.mayoclinic.org/es-es/diseases-conditions/depression/symptoms-causes/syc-20356007" title="">https://www.mayoclinic.org/es-es/diseases-conditions/depression/symptoms-causes/syc-20356007</a></p>
+            </div>
+        </div><!-- End Blog Cover -->
+    </section>
+
+    <!-- End Service -->
+
+
+    <!-- Start Footer -->
+    <footer class="bg-secondary pt-2">
+        <div class="feature-work container my-4">
+            <div class="row d-flex d-flex align-items-center">
+                <div class="col-lg-5">
+                    <h3 class="feature-work-title h4 light-300 text-white">Smart mind</h3>
+                    <h1 class="feature-work-heading h2 py-3 semi-bold-600 text-white">Observatorio</h1>
+                     <p class="feature-work-footer light-300 text-white">Para mas novedades ingrese a nuestros grupos de facebook o whatsapp</p>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-white" target="_blank" href="https://www.facebook.com/profile.php?id=100070894209583">
+                                <i class='bx bxl-facebook-square bx-md'></i>
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item m-0">
+                            <a class="text-white" target="_blank" href="https://chat.whatsapp.com/K6vzOB77wFN7syhgC7fFQk">
+                                <i class='bx bxl-whatsapp-square bx-md'></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <h2 class="h4 pb-lg-3 text-white light-300 ">atencion al Cliente</h2>
+                    <ul class="list-unstyled text-white light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-white py-1" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-white py-1" href="mailto:lcuevas@unsa.edu.pe">smartmind@gmail.com</a>
+                        </li>
+                    </ul>
+                    
+                   
+                </div>
+                
+                <div class="col-lg-6 offset-lg-1 align-left">
+                    <div class="row">
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/1.jpg' %}">
+                        </a>
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/2.jpg' %}">
+                        </a>
+                    </div>
+                    <div class="row pt-4">
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/3.jpg' %}">
+                        </a>
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/4.jpg' %}">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-100 bg-primary py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 SmartMind. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- Isotope -->
+    <script src="{% static 'js/isotope.pkgd.js' %}"></script>
+
+    <script src="{% static 'js/templatemo.js' %}"></script>
+    <!-- Custom -->
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>

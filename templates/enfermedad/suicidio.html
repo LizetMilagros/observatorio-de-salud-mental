@@ -1,0 +1,220 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Observatorio de Salud Mental</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{% static 'img/apple-icon.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <!-- Load Require CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="{% static 'css/boxicon.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="{% static 'css/templatemo.css' %}">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="{% url 'inicio' %}">
+                <i class='bx bxs-home-heart bx-sm text-dark'></i>
+                <span class="text-dark h5">Smart</span> <span class="text-primary h5">Mind</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-9 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'inicio' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'clasificacion' %}">Clasificación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'nosotros' %}">Nosotros</a>
+                        </li>
+                            
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'noticias' %}">Noticias</a>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'suscripcion' %}">Suscribete</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="navbar align-center d-flex mx-xl-1">
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="coul-md-12 search">
+                                <form method="get">
+                                    <div id="custom-search-input">
+                                        <div class="input-group col-md-12 ">
+                                            <input type="text" class="form-control" placeholder="Buscar..." name="Buscar">
+                                                <span class="input-group-list">
+                                                    <i class="icon icon-search"></i>              
+                                                    <button type="submit" class="btn btn-secondary text-white btn rounded-pill rounded-start rounded-end px-lg-3"><i class='bx bx-search bx-sm bx-tada-hover'></i></button>
+                                                </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Start Banner Hero -->
+    <div id="suicidio" class="bg-light w-100">
+        <div class="container-fluid text-light d-flex justify-content-center align-items-center border-0 rounded-0 p-0 py-5">
+            <div class="banner-content col-lg-8 m-lg-auto text-center py-5 px-3">
+                <h1 class="banner-heading h2 pb-5 typo-space-line-center">Intento de suicidio</<h1>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!-- End Banner Hero -->
+
+    <!-- Start Work Sigle -->
+    <section class="container py-5">
+
+        <div class="row pt-5">
+            <div class="worksingle-content col-lg-8 m-auto text-left justify-content-center pb-5">
+                <h2 class="worksingle-heading h3 pb-3 typo-space-line">Intento de suicidio</h2>
+                <p class="worksingle-footer py-3 text-muted 0">
+                    El suicidio, ponerle fin a tu propia vida, es una reacción trágica a situaciones de vida estresantes; más trágica aún porque el suicidio puede prevenirse. Si estás pensando en suicidarte o conoces a alguien que esté teniendo sentimientos suicidas, aprende a identificar los signos de advertencia del suicidio y a comunicarte para buscar ayuda y tratamiento profesional de inmediato. Puedes salvar una vida; la tuya o la de otro.
+                </p>
+                <h3>Causas</h3>
+                <p>Los pensamientos suicidas pueden tener distintas causas. Con mayor frecuencia, los pensamientos suicidas pueden ser el resultado de sentimientos que no puedes afrontar cuando se presenta una situación abrumadora en tu vida. Si crees que no hay esperanzas en el futuro, puede que pienses, equivocadamente, que el suicidio es una solución. Es posible que experimentes una especie de estrechez de criterio donde, en medio de una crisis, sientas que el suicidio es la única salida.<br>
+                También puede existir una propensión genética al suicidio. Las personas que cometen suicidio o que tienen pensamientos o conductas suicidas suelen tener antecedentes familiares de suicidio.</p>  
+                
+                <h3>Síntomas</h3>
+                <p>Los signos que advierten sobre el suicidio o los pensamientos suicidas incluyen lo siguiente:</p>
+                <ul>
+                    <li>Hablar acerca del suicidio, por ejemplo, con dichos como “me voy a suicidar”, “desearía estar muerto” o “desearía no haber nacido”</li>
+                    <li>Obtener los medios para quitarse la vida, por ejemplo, al comprar un arma o almacenar pastillas</li>
+                    <li>Aislarse de la sociedad y querer estar solo</li>
+                    <li>Tener cambios de humor, como euforia un día y desazón profunda el siguiente</li>
+                    <li>Preocuparse por la muerte, por morir o por la violencia</li>
+                    <li>Sentirse atrapado o sin esperanzas a causa de alguna situación</li>
+                    <li>Cambiar la rutina normal, incluidos los patrones de alimentación y sueño</li>
+                    <li>Manifestar cambios de personalidad o sentirse extremadamente ansioso o agitado, en especial cuando se tienen algunos de los signos de advertencia que se mencionaron con anterioridad</li>
+                </ul>
+                
+                <h3>Prevención</h3>
+                <p>Para ayudarte a evitar pensar en el suicidio:</p>
+                <ul>
+                    <li><b>Busca el tratamiento que necesites.</b> Si no tratas la causa de fondo, es posible que los pensamientos suicidas regresen.</li>
+                    <li><b>Crea una red de apoyo.</b> Hablar de los sentimientos suicidas puede ser difícil, y es posible que tus amigos y familiares no comprendan completamente por qué te sientes de ese modo.</li>
+                    <li><b>Recuerda que los sentimientos suicidas son temporales.</b> Si te sientes desesperanzado o sientes que seguir viviendo no vale la pena, recuerda que el tratamiento puede ayudarte a recuperar la perspectiva y a mejorar tu vida.</li>
+                </ul>
+                <p><b>Fuente: </b><a href="https://www.mayoclinic.org/es-es/diseases-conditions/suicide/symptoms-causes/syc-20378048" title="">https://www.mayoclinic.org/es-es/diseases-conditions/suicide/symptoms-causes/syc-20378048</a></p>
+            </div>
+        </div><!-- End Blog Cover -->
+    </section>
+
+    <!-- End Service -->
+
+
+    <!-- Start Footer -->
+    <footer class="bg-secondary pt-2">
+        <div class="feature-work container my-4">
+            <div class="row d-flex d-flex align-items-center">
+                <div class="col-lg-5">
+                    <h3 class="feature-work-title h4 light-300 text-white">Smart mind</h3>
+                    <h1 class="feature-work-heading h2 py-3 semi-bold-600 text-white">Observatorio</h1>
+                     <p class="feature-work-footer light-300 text-white">Para mas novedades ingrese a nuestros grupos de facebook o whatsapp</p>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-white" target="_blank" href="https://www.facebook.com/profile.php?id=100070894209583">
+                                <i class='bx bxl-facebook-square bx-md'></i>
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item m-0">
+                            <a class="text-white" target="_blank" href="https://chat.whatsapp.com/K6vzOB77wFN7syhgC7fFQk">
+                                <i class='bx bxl-whatsapp-square bx-md'></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <h2 class="h4 pb-lg-3 text-white light-300 ">atencion al Cliente</h2>
+                    <ul class="list-unstyled text-white light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-white py-1" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-white py-1" href="mailto:lcuevas@unsa.edu.pe">smartmind@gmail.com</a>
+                        </li>
+                    </ul>
+                    
+                   
+                </div>
+                
+                <div class="col-lg-6 offset-lg-1 align-left">
+                    <div class="row">
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/1.jpg' %}">
+                        </a>
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/2.jpg' %}">
+                        </a>
+                    </div>
+                    <div class="row pt-4">
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/3.jpg' %}">
+                        </a>
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/4.jpg' %}">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-100 bg-primary py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 SmartMind. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- Isotope -->
+    <script src="{% static 'js/isotope.pkgd.js' %}"></script>
+
+    <script src="{% static 'js/templatemo.js' %}"></script>
+    <!-- Custom -->
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>

@@ -9,3 +9,83 @@ https://templatemo.com/tm-561-purple-buzz
 .input-group .gmail .btn {
 	left: 120px;
 }
+
+#comportamiento {
+  background-image: url('./../img/services-0.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#depresivo {
+  background-image: url('./../img/services-02.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#violencia {
+  background-image: url('./../img/services-03.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#alimentario {
+  background-image: url('./../img/services-04.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#ansiedad {
+  background-image: url('./../img/services-05.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#suicidio {
+  background-image: url('./../img/services-06.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#psicotico {
+  background-image: url('./../img/services-07.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#alcohol {
+  background-image: url('./../img/services-08.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#drogas {
+  background-image: url('./../img/services-09.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#escolar {
+  background-image: url('./../img/services-10.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}

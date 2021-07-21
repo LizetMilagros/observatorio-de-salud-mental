@@ -168,11 +168,18 @@
                     <h2 class="h3 pb-4 typo-space-line">¿Qué es?</h2>
                 </div>
             </div>
-            <p class="service-footer col-10 offset-2 col-lg-9 offset-lg-3 text-start pb-3 text-muted px-2">
+            <p class="service-footer justif col-10 offset-2 col-lg-9 offset-lg-3 text-start pb-3 text-muted px-2">
                 Mucha gente, cuando escucha el término de salud mental, piensa en enfermedad mental. Pero la salud mental es mucho más que la ausencia de enfermedad mental.
                 Tiene relación con la vida cotidiana de todos nosotros, con el modo con que cada uno se lleva con sus familia, en el colegio, en el trabajo, en el juego, con sus pares, en su barrio, en la comunidad.<br>
                 La salud mental es algo que todos deseamos para nosotros mismos, ya sea que lo sepamos por su nombre o no. Cuando hablamos de la felicidad, de la tranquilidad de espíritu, de la capacidad de goce o satisfacción, estamos usualmente hablando de la salud mental.
             </p>
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-7 col-sm-7 pt-4 pb-4">
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/69gRZSpkqnE" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="service-tag py-5 bg-secondary">
@@ -201,7 +208,7 @@
 
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project conducta">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <a href="{% url 'comportamiento' %}" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="service card-img" src="{% static 'img/services-0.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
@@ -214,7 +221,7 @@
 
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project animo">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <a href="{% url 'depresivo' %}" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="card-img" src="{% static 'img/services-02.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
@@ -227,7 +234,7 @@
 
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project otros">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <a href="{% url 'violencia' %}" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="card-img" src="{% static 'img/services-03.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
@@ -240,7 +247,7 @@
 
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project conducta">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <a href="{% url 'alimentario' %}" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="card-img" src="{% static 'img/services-04.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
@@ -253,7 +260,7 @@
 
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project animo">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <a href="{% url 'ansiedad' %}" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="card-img" src="{% static 'img/services-05.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
@@ -266,7 +273,7 @@
 
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project animo">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <a href="{% url 'suicidio' %}" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="card-img" src="{% static 'img/services-06.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
@@ -279,7 +286,7 @@
 
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project conducta">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <a href="{% url 'psicotico' %}" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="card-img" src="{% static 'img/services-07.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
@@ -292,7 +299,7 @@
 
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project otros">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <a href="{% url 'alcohol' %}" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="card-img" src="{% static 'img/services-08.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
@@ -305,7 +312,7 @@
 
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project otros">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <a href="{% url 'drogas' %}" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="card-img" src="{% static 'img/services-09.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
@@ -318,7 +325,7 @@
 
             <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project conducta">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <a href="{% url 'escolar' %}" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="service card-img" src="{% static 'img/services-10.jpg' %}" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">

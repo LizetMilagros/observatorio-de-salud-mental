@@ -142,3 +142,136 @@ def resultado(request):
 		return render(request, 'resultado.html')
 
 	return render(request, 'resultado.html', {'noticia':noticia})
+
+
+
+#interfaces de trastornos mentales
+def comportamiento(request):
+	noticia = Noticia.objects.all()
+	queryset= request.GET.get("Buscar")
+	if queryset:
+		noticia = Noticia.objects.filter(
+			Q(titulo__icontains = queryset) |
+			Q(descripcion__icontains = queryset)
+		).distinct()
+		return render(request, 'resultado.html', {'noticia':noticia})
+	elif queryset=="":
+		return render(request, 'resultado.html')
+	return render(request, 'enfermedad/comportamiento.html')
+
+def alcohol(request):
+	noticia = Noticia.objects.all()
+	queryset= request.GET.get("Buscar")
+	if queryset:
+		noticia = Noticia.objects.filter(
+			Q(titulo__icontains = queryset) |
+			Q(descripcion__icontains = queryset)
+		).distinct()
+		return render(request, 'resultado.html', {'noticia':noticia})
+	elif queryset=="":
+		return render(request, 'resultado.html')
+	return render(request, 'enfermedad/alcohol.html')
+
+def alimentario(request):
+	noticia = Noticia.objects.all()
+	queryset= request.GET.get("Buscar")
+	if queryset:
+		noticia = Noticia.objects.filter(
+			Q(titulo__icontains = queryset) |
+			Q(descripcion__icontains = queryset)
+		).distinct()
+		return render(request, 'resultado.html', {'noticia':noticia})
+	elif queryset=="":
+		return render(request, 'resultado.html')
+	return render(request, 'enfermedad/alimentario.html')
+
+def ansiedad(request):
+	noticia = Noticia.objects.all()
+	queryset= request.GET.get("Buscar")
+	if queryset:
+		noticia = Noticia.objects.filter(
+			Q(titulo__icontains = queryset) |
+			Q(descripcion__icontains = queryset)
+		).distinct()
+		return render(request, 'resultado.html', {'noticia':noticia})
+	elif queryset=="":
+		return render(request, 'resultado.html')
+	return render(request, 'enfermedad/ansiedad.html')
+
+def depresivo(request):
+	noticia = Noticia.objects.all()
+	queryset= request.GET.get("Buscar")
+	if queryset:
+		noticia = Noticia.objects.filter(
+			Q(titulo__icontains = queryset) |
+			Q(descripcion__icontains = queryset)
+		).distinct()
+		return render(request, 'resultado.html', {'noticia':noticia})
+	elif queryset=="":
+		return render(request, 'resultado.html')
+	return render(request, 'enfermedad/depresivo.html')
+
+def drogas(request):
+	noticia = Noticia.objects.all()
+	queryset= request.GET.get("Buscar")
+	if queryset:
+		noticia = Noticia.objects.filter(
+			Q(titulo__icontains = queryset) |
+			Q(descripcion__icontains = queryset)
+		).distinct()
+		return render(request, 'resultado.html', {'noticia':noticia})
+	elif queryset=="":
+		return render(request, 'resultado.html')
+	return render(request, 'enfermedad/drogas.html')
+
+def escolar(request):
+	noticia = Noticia.objects.all()
+	queryset= request.GET.get("Buscar")
+	if queryset:
+		noticia = Noticia.objects.filter(
+			Q(titulo__icontains = queryset) |
+			Q(descripcion__icontains = queryset)
+		).distinct()
+		return render(request, 'resultado.html', {'noticia':noticia})
+	elif queryset=="":
+		return render(request, 'resultado.html')
+	return render(request, 'enfermedad/escolar.html')
+
+def psicotico(request):
+	noticia = Noticia.objects.all()
+	queryset= request.GET.get("Buscar")
+	if queryset:
+		noticia = Noticia.objects.filter(
+			Q(titulo__icontains = queryset) |
+			Q(descripcion__icontains = queryset)
+		).distinct()
+		return render(request, 'resultado.html', {'noticia':noticia})
+	elif queryset=="":
+		return render(request, 'resultado.html')
+	return render(request, 'enfermedad/psicotico.html')
+
+def suicidio(request):
+	noticia = Noticia.objects.all()
+	queryset= request.GET.get("Buscar")
+	if queryset:
+		noticia = Noticia.objects.filter(
+			Q(titulo__icontains = queryset) |
+			Q(descripcion__icontains = queryset)
+		).distinct()
+		return render(request, 'resultado.html', {'noticia':noticia})
+	elif queryset=="":
+		return render(request, 'resultado.html')
+	return render(request, 'enfermedad/suicidio.html')
+
+def violencia(request):
+	noticia = Noticia.objects.all()
+	queryset= request.GET.get("Buscar")
+	if queryset:
+		noticia = Noticia.objects.filter(
+			Q(titulo__icontains = queryset) |
+			Q(descripcion__icontains = queryset)
+		).distinct()
+		return render(request, 'resultado.html', {'noticia':noticia})
+	elif queryset=="":
+		return render(request, 'resultado.html')
+	return render(request, 'enfermedad/violencia.html')
