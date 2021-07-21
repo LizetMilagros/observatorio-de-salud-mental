@@ -1,0 +1,213 @@
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Observatorio de Salud Mental</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{% static 'img/apple-icon.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <!-- Load Require CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="{% static 'css/boxicon.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="{% static 'css/templatemo.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="{% url 'inicio' %}">
+                <i class='bx bxs-home-heart bx-sm text-dark'></i>
+                <span class="text-dark h5">Smart</span> <span class="text-primary h5">Mind</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-9 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'inicio' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'clasificacion' %}">Clasificación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'nosotros' %}">Nosotros</a>
+                        </li>
+                            
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'noticias' %}">Noticias</a>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'suscripcion' %}">Suscribete</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="navbar align-center d-flex mx-xl-1">
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="coul-md-12 search">
+                                <form method="get">
+                                    <div id="custom-search-input">
+                                        <div class="input-group col-md-12 ">
+                                            <input type="text" class="form-control" placeholder="Buscar..." value="{{request.GET.Buscar}}" name="Buscar">
+                                                <span class="input-group-list">
+                                                    <i class="icon icon-search"></i>              
+                                                    <button type="submit" class="btn btn-secondary text-white btn rounded-pill rounded-start rounded-end px-lg-3"><i class='bx bx-search bx-sm bx-tada-hover'></i></button>
+                                                </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+
+    <div class="container-lg py-3">
+        <div class="col-md-12 m-auto text-center pt-5 pb-1">
+            <h1 class="pricing-header h2 semi-bold-600">Resultados</h1>
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- Start Pricing Horizontal Section -->
+    <section class="bg-light pt-sm-0 py-5">
+        <div class="container py-5">
+            {% if noticia %}
+                {% for noti in noticia %}
+                    <div class="pricing-horizontal row col-10 m-auto shadow-sm rounded overflow-hidden my-5 bg-white">
+                        
+                        <div class="pricing-horizontal-icon col-md-3 col-lg-3 text-center bg-secondary text-light py-4">
+                            <img class="card-img-top" src="{{noti.imagen}}" alt="...">
+                        </div>
+                        <div class="pricing-horizontal-body col-md-9 col-lg-9 align-items-center pl-3 pt-lg-0 pt-1">
+                            <div class="pricing-horizontal-tag col-md-12 col-lg-12 pt-2">
+                                <a href="{{noti.fuente}}" target="_blank" class="col-sm-6 col-lg-12 text-decoration-none">
+                                    <div class="service-work overflow-hidden mb-1 mx-5 m-sm-0">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-dark">{{noti.titulo}}</h5>
+                                            <p class="card-text light-300 text-dark">
+                                                {{noti.descripcion}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="pricing-horizontal-tag col-md-12 text-center pb-2 align-items-center">
+                                <a href="{{noti.fuente}}" target="_blank" class="btn rounded-pill px-4 btn-outline-primary mb-2">Leer más <i class='bx bxs-hand-right ms-1'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            {% else %}
+                <h3 class="pricing-table-heading text-center h5 semi-bold-200">Su búsqueda no produjo resultados</h3>
+            {% endif %}
+            
+        </div>
+    </section>
+
+
+    <!-- Start Footer -->
+    <footer class="bg-secondary pt-2">
+        <div class="feature-work container my-4">
+            <div class="row d-flex d-flex align-items-center">
+                <div class="col-lg-5">
+                    <h3 class="feature-work-title h4 light-300 text-white">Smart mind</h3>
+                    <h1 class="feature-work-heading h2 py-3 semi-bold-600 text-white">Observatorio</h1>
+                     <p class="feature-work-footer light-300 text-white">Para mas novedades ingrese a nuestros grupos de facebook o whatsapp</p>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-white" target="_blank" href="https://www.facebook.com/profile.php?id=100070894209583">
+                                <i class='bx bxl-facebook-square bx-md'></i>
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item m-0">
+                            <a class="text-white" target="_blank" href="https://chat.whatsapp.com/K6vzOB77wFN7syhgC7fFQk">
+                                <i class='bx bxl-whatsapp-square bx-md'></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <h2 class="h4 pb-lg-3 text-white light-300 ">atencion al Cliente</h2>
+                    <ul class="list-unstyled text-white light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-white py-1" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-white py-1" href="mailto:lcuevas@unsa.edu.pe">smartmind@gmail.com</a>
+                        </li>
+                    </ul>
+                    
+                   
+                </div>
+                
+                <div class="col-lg-6 offset-lg-1 align-left">
+                    <div class="row">
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/1.jpg' %}">
+                        </a>
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/2.jpg' %}">
+                        </a>
+                    </div>
+                    <div class="row pt-4">
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/3.jpg' %}">
+                        </a>
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/4.jpg' %}">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-100 bg-primary py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 SmartMind. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Templatemo -->
+    <script src="{% static 'js/templatemo.js' %}"></script>
+    <!-- Custom -->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>

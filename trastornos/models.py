@@ -25,3 +25,13 @@ class Tamizajes (models.Model):
     GrupoTamizaje=models.CharField(max_length =30)
     DetalleTamizaje=models.CharField(max_length =30)
     Casos=models.IntegerField()
+
+class Noticia(models.Model):
+    titulo = models.CharField('Titulo', max_length =150, blank=False, null=False)
+    fuente = models.CharField('Fuente', max_length =300, blank=False, null=False)
+    descripcion = models.CharField('Descripcion', max_length =200, blank=False, null=False)
+    imagen = models.URLField(max_length =255, blank=False, null=False)
+
+    def __str__(self):
+        return self.titulo
+

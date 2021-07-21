@@ -26,14 +26,14 @@
         <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand h1" href="{% url 'inicio' %}">
                 <i class='bx bxs-home-heart bx-sm text-dark'></i>
-                <span class="text-dark h4">Smart</span> <span class="text-primary h4">Mind</span>
+                <span class="text-dark h5">Smart</span> <span class="text-primary h5">Mind</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
-                <div class="flex-fill mx-xl-5 mb-2">
+                <div class="flex-fill mx-xl-9 mb-2">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'inicio' %}">Inicio</a>
@@ -44,12 +44,17 @@
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'nosotros' %}">Nosotros</a>
                         </li>
+                            
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'noticias' %}">Noticias</a>
+                        </li>  
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'suscripcion' %}">Suscribete</a>
                         </li>
+
                     </ul>
                 </div>
-                <div class="navbar align-center d-flex">
+                <div class="navbar align-center d-flex mx-xl-1">
                     
                     <div class="container">
                         <div class="row">
@@ -150,29 +155,6 @@
         </div>
     </div>
     <!-- End Banner Hero -->
-    
-
-    
-    <!--BARRRA BUSQUEDA-->
-    <!--
-    <div class="container">
-        <div class="row">
-            <div class="coul-md-12 search">
-                <form method="get">
-                    <div id="custom-search-input">
-                        <div class="input-group col-md-12">
-                            <input type="text" class="form-control" placeholder="Buscar..." name="Buscar">
-                                <span class="input-group-list">
-                                    <i class="icon icon-search"></i>              
-                                    <button type="submit" class="boton btn-success">BUSCAR</button>
-                                </span>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>-->
-    <!-- FIN -->
 
     <!-- Start Service -->
     <section class="service-wrapper py-3">
@@ -354,7 +336,61 @@
 
     <!-- Start Footer -->
     <footer class="bg-secondary pt-2">
-        
+        <div class="feature-work container my-4">
+            <div class="row d-flex d-flex align-items-center">
+                <div class="col-lg-5">
+                    <h3 class="feature-work-title h4 light-300 text-white">Smart mind</h3>
+                    <h1 class="feature-work-heading h2 py-3 semi-bold-600 text-white">Observatorio</h1>
+                     <p class="feature-work-footer light-300 text-white">Para mas novedades ingrese a nuestros grupos de facebook o whatsapp</p>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-white" target="_blank" href="https://www.facebook.com/profile.php?id=100070894209583">
+                                <i class='bx bxl-facebook-square bx-md'></i>
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item m-0">
+                            <a class="text-white" target="_blank" href="https://chat.whatsapp.com/K6vzOB77wFN7syhgC7fFQk">
+                                <i class='bx bxl-whatsapp-square bx-md'></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <h2 class="h4 pb-lg-3 text-white light-300 ">atencion al Cliente</h2>
+                    <ul class="list-unstyled text-white light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-white py-1" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-white py-1" href="mailto:lcuevas@unsa.edu.pe">smartmind@gmail.com</a>
+                        </li>
+                    </ul>
+                    
+                   
+                </div>
+                
+                <div class="col-lg-6 offset-lg-1 align-left">
+                    <div class="row">
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/1.jpg' %}">
+                        </a>
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/2.jpg' %}">
+                        </a>
+                    </div>
+                    <div class="row pt-4">
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/3.jpg' %}">
+                        </a>
+                        <a class="col" data-type="image" data-fslightbox="gallery" href="">
+                            <img class="img-fluid" src="{% static 'img/4.jpg' %}">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <div class="w-100 bg-primary py-3">
             <div class="container">
                 <div class="row pt-2">
