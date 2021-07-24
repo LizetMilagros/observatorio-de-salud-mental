@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.contrib import messages
 from django.contrib.auth.models import User
-from .models import Noticia
+from .models import Noticia,Atendidos
 from django.db.models import Q
 from django.core.paginator import Paginator
 
@@ -275,3 +275,19 @@ def violencia(request):
 	elif queryset=="":
 		return render(request, 'resultado.html')
 	return render(request, 'enfermedad/violencia.html')
+
+def mapaCalor(request):
+	noticia = Noticia.objects.all()
+	casos = Atendidos.objects.all()
+	
+	queryset= request.GET.get("Buscar")
+	if queryset:
+		noticia = Noticia.objects.filter(
+			Q(titulo__icontains = queryset) |
+			Q(descripcion__icontains = queryset)
+		).distinct()
+		return render(request, 'resultado.html', {'noticia':noticia})
+	elif queryset=="":
+		return render(request, 'resultado.html')
+
+	return render(request, 'mapaCalor.html',{"casos":casos})

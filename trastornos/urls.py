@@ -19,4 +19,5 @@ urlpatterns = [
 	path('psicotico', views.psicotico, name='psicotico'),
 	path('suicidio', views.suicidio, name='suicidio'),
 	path('violencia', views.violencia, name='violencia'),
+	path('mapa', views.mapaCalor, name='mapa'),
 ]
