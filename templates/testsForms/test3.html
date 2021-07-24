@@ -1,0 +1,82 @@
+<!-- Created By CodingNepal - www.codingnepalweb.com  -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T. Depresión</title>
+    <link rel="stylesheet" href="{% static 'css/estilosT3.css' %}">
+    <!-- FontAweome CDN Link for Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <!-- start Quiz button -->
+    <div class="start_btn"><button>Iniciar el test</button></div>
+
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Información sobre el test</span></div>
+        <div class="info-list">
+            <div class="info">1. Con el propósito de medir o evaluar si padecemos de depresion en algun grado, se elaboró el listado de situaciones atipicas que corresponden a este padecimiento.</div>
+            <div class="info">2. Se trata de un test psicológico que permite medir el nivel de depresion que padece un individuo cualquiera.</div>
+            <div class="info">3. A continuación seleccione 1 de las 4 opciones para cada uno de los síntomas</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Salir</button>
+            <button class="restart">Continuar</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Síntoma</div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Siguiente</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">Usted ha completado el test!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="info_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Rehacer el test</button>
+            <button class="quit">Salir del test</button>
+        </div>
+    </div>
+
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <script src="{% static 'js/jsTest3/questions.js' %}"></script>
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="{% static 'js/jsTest3/script.js' %}"></script>
+
+</body>
+
+</html>

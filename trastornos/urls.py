@@ -1,4 +1,5 @@
 from django.urls import path
+from django.views.generic.base import View
 from . import views
 from trastornos.views import *
 
@@ -20,4 +21,9 @@ urlpatterns = [
 	path('suicidio', views.suicidio, name='suicidio'),
 	path('violencia', views.violencia, name='violencia'),
 	path('mapa', views.mapaCalor, name='mapa'),
+	path('tests', views.testFormulario, name='tests'),
+	path('testAnsiedad', views.testAnsiedad, name='testAnsiedad'),
+	path('testComportamiento', views.testComportamiento, name='testComportamiento'),
+	path('testDepresivo', views.testDepresivo, name='testDepresivo'),
+	path('testPsicotico', views.testPsicotico, name='testPsicotico'),
 ]

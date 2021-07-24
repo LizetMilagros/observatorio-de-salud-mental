@@ -291,3 +291,18 @@ def mapaCalor(request):
 		return render(request, 'resultado.html')
 
 	return render(request, 'mapaCalor.html',{"casos":casos})
+
+def testFormulario(request):
+	return render(request, 'test.html')
+
+def testAnsiedad(request):
+	return render(request, 'testsForms/test1.html')
+
+def testComportamiento(request):
+	return render(request, 'testsForms/test2.html')
+
+def testDepresivo(request):
+	return render(request, 'testsForms/test3.html')
+
+def testPsicotico(request):
+	return render(request, 'testsForms/test4.html')
