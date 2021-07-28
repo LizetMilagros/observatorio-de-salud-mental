@@ -26,4 +26,5 @@ urlpatterns = [
 	path('testComportamiento', views.testComportamiento, name='testComportamiento'),
 	path('testDepresivo', views.testDepresivo, name='testDepresivo'),
 	path('testPsicotico', views.testPsicotico, name='testPsicotico'),
+	path('graficas', views.graficas, name='graficas'),
 ]
