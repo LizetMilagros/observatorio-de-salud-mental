@@ -27,6 +27,7 @@ def inicio(request):
 	return render(request, 'inicio.html')
 
 
+
 def nosotros(request):
 	noticia = Noticia.objects.all()
 	queryset= request.GET.get("Buscar")
@@ -352,3 +353,15 @@ def testDepresivo(request):
 
 def testPsicotico(request):
 	return render(request, 'testsForms/test4.html')
+
+def graficas(request):
+	labels = []
+	data = []
+	queryset = Atendidos.objects.order_by('-Atendidos')[:8]
+	for var in queryset:
+		labels.append(var.Departamento)
+		data.append(var.Atendidos)
+	return render(request, 'graficas.html', {
+        'labels': labels,
+        'data': data,
+    })
