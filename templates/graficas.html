@@ -1,0 +1,333 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Observatorio de Salud Mental</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{% static 'img/apple-icon.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <!-- Load Require CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="{% static 'css/boxicon.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="{% static 'css/templatemo.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+
+    <!--Grafico-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="{% static 'lib/highcharts-9.1.2/highcharts.js' %}"></script>
+    <script src="{% static 'lib/highcharts-9.1.2/modules/exporting.js' %}"></script>
+    <script src="{% static 'lib/highcharts-9.1.2/modules/export-data.js' %}"></script>
+    <script src="{% static 'lib/highcharts-9.1.2/modules/accessibility.js' %}"></script>
+    <script src="{% static 'lib/highcharts-9.1.2/modules/series-label.js' %}"></script>
+    <script src="{% static 'lib/highcharts-9.1.2/modules/item-series.js' %}"></script>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="{% url 'inicio' %}">
+                <i class='bx bxs-home-heart bx-sm text-dark'></i>
+                <span class="text-dark h4">Smart</span> <span class="text-primary h4">Mind</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'inicio' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'clasificacion' %}">Clasificación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'mapa' %}">Mapa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'nosotros' %}">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'suscripcion' %}">Suscribete</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="coul-md-12 search">
+                                <form method="get">
+                                    <div id="custom-search-input">
+                                        <div class="input-group col-md-12 ">
+                                            <input type="text" class="form-control" placeholder="Buscar..." name="Buscar">
+                                                <span class="input-group-list">
+                                                    <i class="icon icon-search"></i>              
+                                                    <button type="submit" class="btn btn-secondary text-white btn rounded-pill rounded-start rounded-end px-lg-3"><i class='bx bx-search bx-sm bx-tada-hover'></i></button>
+                                                </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <section class="bg-secondary py-1">
+        <div class="container">
+            <h2 class="h2 text-white text-center">Graficas de enfermedades mentales en el Perú</h2>
+        </div>
+    </section>
+
+    <!-- Start Banner Hero -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="container1">
+                    
+                </div>
+            </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="container-pie">
+                
+            </div>
+        </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-lg-12">
+        <div id="container-area">
+            
+        </div>
+    </div>
+</div>
+    </div>
+
+    <script type="application/javascript">
+    Highcharts.chart('container1', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'CANTIDAD DE ATENDIDOS POR REGION'
+    },
+    subtitle: {
+        text: 'Reporte de Columnas'
+    },
+    xAxis: {
+        categories: [
+            
+            'Amazonas',
+            'Ancash',
+            'Apurimas',
+            'Arequipa',
+            'Cajamarca',
+            'Callao',
+            'Cusco',
+            'Huancavelica',
+            'Huanuco',
+            'Ica',
+            'Junin',
+            'La Libertad',
+            'Lambayeque',
+            'Lima',
+            'Loreto',
+            'Madre de Dios',
+            'Moquegua',
+            'Pasco',
+            'Piura',
+            'Puno',
+            'San Martin',
+            'Tacna',
+            'Tumbres',
+            'Ucayali',
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'N° Personas'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Atendidos',
+        data: [49, 71, 106, 129, 144, 176, 135, 148, 216, 194, 95, 54]
+
+    }, {
+        name: 'Atenciones',
+        data: [83, 78, 98, 93, 106, 84, 105, 104, 91, 83, 106, 92]
+
+    
+    }]
+});
+Highcharts.chart('container-pie', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'CANTIDAD DE ATENDIDOS POR MES'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} '
+            }
+        }
+    },
+    series: [{
+        name: 'Atendidos',
+        colorByPoint: true,
+        data: [{
+            name: 'Enero',
+            y: 61.41,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Febrero',
+            y: 11.84
+        }, {
+            name: 'Marzo',
+            y: 10.85
+        }, {
+            name: 'Abril',
+            y: 4.67
+        }, {
+            name: 'Mayo',
+            y: 4.18
+        }, {
+            name: 'Junio',
+            y: 1.64
+        }, {
+            name: 'Julio',
+            y: 1.6
+        }, {
+            name: 'Agosto',
+            y: 1.2
+        }, {
+            name: 'Septiembre',
+            y: 2.61
+        },{
+            name: 'Octubre',
+            y: 2.61
+        },{
+            name: 'Noviembre',
+            y: 2.61
+        },{
+            name: 'Diciembre',
+            y: 2.61
+        }]
+    }]
+});
+Highcharts.chart('container-area', {
+
+chart: {
+    type: 'item'
+},
+
+title: {
+    text: 'PORCENTAJE POR CADA TRANSTORNO'
+},
+
+subtitle: {
+    text: 'PORCENTAJE'
+},
+
+legend: {
+    labelFormat: '{name} <span style="opacity: 0.4">{y}</span>'
+},
+
+series: [{
+    name: 'Representatives',
+    keys: ['name', 'y', 'color', 'label'],
+    data: [
+        ['Violencia Familiar', 69, '#5B2C6F', 'Violencia Familiar'],
+        ['Ansiedad', 153, '#EB001F', 'Ansiedad'],
+        ['Transtorno Depresivo', 67, '#64A12D', 'Transtorno Depresivo'],
+        ['Transtorno del Comportamiento', 80, '#FFED00', 'Transtorno del comportamiento'],
+        ['Transtorno de cosumo de alcohol', 200, '#000000', 'Transtorno de cosumo de alcohol'],
+        ['Trastorno de consumo de otras drogas', 46, '#008AC5', 'Trastorno de consumo de otras drogas'],
+        ['Intento de suicidio', 94, '#009EE0', 'Intento de suicidio'],
+        ['Síndrome y/o trastorno psicótico', 138, '#D35400 ', 'Síndrome y/o trastorno psicótico'],
+        ['Trastornos alimentarios', 36, '#F5B7B1 ', 'Trastornos alimentarios'],
+        ['Violencia escolar', 40, '#2E4053 ', 'Violencia escolar'],
+    ],
+    dataLabels: {
+        enabled: true,
+        format: '{point.label} '
+    },
+
+    // Circular options
+    center: ['50%', '88%'],
+    size: '170%',
+    startAngle: -100,
+    endAngle: 100
+}]
+});
+    </script>
+
+
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Templatemo -->
+    <script src="{% static 'js/templatemo.js' %}"></script>
+    <!-- Custom -->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+   
+   
+
+    <!--Grafico circular-->
+    
+</body>
+
+</html>
