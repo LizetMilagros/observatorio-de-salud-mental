@@ -3,7 +3,7 @@ from django.views.generic import TemplateView
 from django.contrib import messages
 from django.contrib.auth.models import User
 from .models import Noticia,Atendidos
-from django.db.models import Q
+from django.db.models import Q, Sum
 from django.core.paginator import Paginator
 
 from django.conf import settings
@@ -97,6 +97,36 @@ def suscripcion(request):
 
 def clasificacion(request):
 	noticia = Noticia.objects.all()
+	violenciaM = Atendidos.objects.filter(Diagnostico = 'VIOLENCIA FAMILIAR/MALTRATO INFANTIL', Sexo='M').aggregate(Sum('Atendidos'))
+	violenciaF = Atendidos.objects.filter(Diagnostico = 'VIOLENCIA FAMILIAR/MALTRATO INFANTIL', Sexo='F').aggregate(Sum('Atendidos'))
+
+	ansiedadM = Atendidos.objects.filter(Diagnostico = 'ANSIEDAD', Sexo='M').aggregate(Sum('Atendidos'))
+	ansiedadF = Atendidos.objects.filter(Diagnostico = 'ANSIEDAD', Sexo='F').aggregate(Sum('Atendidos'))
+
+	depresionM = Atendidos.objects.filter(Diagnostico = 'TRASTORNO DEPRESIVO', Sexo='M').aggregate(Sum('Atendidos'))
+	depresionF = Atendidos.objects.filter(Diagnostico = 'TRASTORNO DEPRESIVO', Sexo='F').aggregate(Sum('Atendidos'))
+
+	comportamientoM = Atendidos.objects.filter(Diagnostico = 'TRASTORNO DEL COMPORTAMIENTO (F90 - F91)', Sexo='M').aggregate(Sum('Atendidos'))
+	comportamientoF = Atendidos.objects.filter(Diagnostico = 'TRASTORNO DEL COMPORTAMIENTO (F90 - F91)', Sexo='F').aggregate(Sum('Atendidos'))
+
+	alcoholM = Atendidos.objects.filter(Diagnostico = 'TRASTORNO CONSUMO DE ALCOHOL', Sexo='M').aggregate(Sum('Atendidos'))
+	alcoholF = Atendidos.objects.filter(Diagnostico = 'TRASTORNO CONSUMO DE ALCOHOL', Sexo='F').aggregate(Sum('Atendidos'))
+
+	drogasM = Atendidos.objects.filter(Diagnostico = 'TRASTORNO CONSUMO DE OTRAS DROGAS', Sexo='M').aggregate(Sum('Atendidos'))
+	drogasF = Atendidos.objects.filter(Diagnostico = 'TRASTORNO CONSUMO DE OTRAS DROGAS', Sexo='F').aggregate(Sum('Atendidos'))
+
+	suicidioM = Atendidos.objects.filter(Diagnostico = 'INTENTO DE SUICIDIO', Sexo='M').aggregate(Sum('Atendidos'))
+	suicidioF = Atendidos.objects.filter(Diagnostico = 'INTENTO DE SUICIDIO', Sexo='F').aggregate(Sum('Atendidos'))
+
+	psicoM = Atendidos.objects.filter(Diagnostico = 'SINDROME Y/O TRASTORNO PSICOTICO', Sexo='M').aggregate(Sum('Atendidos'))
+	psicoF = Atendidos.objects.filter(Diagnostico = 'SINDROME Y/O TRASTORNO PSICOTICO', Sexo='F').aggregate(Sum('Atendidos'))
+
+	alimentacionM = Atendidos.objects.filter(Diagnostico = 'TRASTORNOS ALIMENTARIOS (F500 - F508 ANOREXIA, BULIMIA)', Sexo='M').aggregate(Sum('Atendidos'))
+	alimentacionF = Atendidos.objects.filter(Diagnostico = 'TRASTORNOS ALIMENTARIOS (F500 - F508 ANOREXIA, BULIMIA)', Sexo='F').aggregate(Sum('Atendidos'))
+
+	escolarM = Atendidos.objects.filter(Diagnostico = 'VIOLENCIA ESCOLAR (Y062 - BULLYING)', Sexo='M').aggregate(Sum('Atendidos'))
+	escolarF = Atendidos.objects.filter(Diagnostico = 'VIOLENCIA ESCOLAR (Y062 - BULLYING)', Sexo='F').aggregate(Sum('Atendidos'))
+
 	queryset= request.GET.get("Buscar")
 	if queryset:
 		noticia = Noticia.objects.filter(
@@ -106,7 +136,23 @@ def clasificacion(request):
 		return render(request, 'resultado.html', {'noticia':noticia})
 	elif queryset=="":
 		return render(request, 'resultado.html')
-	return render(request, 'clasificacion.html')
+
+
+	return render(request, 
+		'clasificacion.html',
+		{
+			'violenciaM':violenciaM, 'violenciaF':violenciaF,
+			'ansiedadM':ansiedadM, 'ansiedadF':ansiedadF,
+			'depresionM':depresionM, 'depresionF':depresionF,
+			'comportamientoM':comportamientoM, 'comportamientoF':comportamientoF,
+			'alcoholM':alcoholM, 'alcoholF':alcoholF,
+			'drogasM':drogasM, 'drogasF':drogasF,
+			'suicidioM':suicidioM, 'suicidioF':suicidioF,
+			'psicoM':psicoM, 'psicoF':psicoF,
+			'alimentacionM':alimentacionM, 'alimentacionF':alimentacionF,
+			'escolarM':escolarM, 'escolarF':escolarF,
+		}
+	)
 
 
 def prueba(request):

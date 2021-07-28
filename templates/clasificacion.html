@@ -102,91 +102,7 @@
                 </div>
                 
                 <div class="contact-img col-lg-8 align-items-end col-md-12">
-                    
-                    <table class="table">
-                        <thead class = "thead-light">
-                            <tr>
-                                <th scope="col">No.</th>
-                                <th scope="col">Trastorno mental</th>
-                                <th scope="col">Hombres</th>
-                                <th scope="col">Mujeres</th>
-                                <th scope="col">Total de pacientes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th data-title="No." scope="row">1</th>
-                                <th data-title="Trastorno mental" scope="row">Violencia familiar/maltrato infantil</th>
-                                <th data-title="Hombres" scope="row">12139</th>
-                                <th data-title="Mujeres" scope="row">22039</th>
-                                <th data-title="Total de pacientes" scope="row">34178</th>
-                            </tr>
-                            <tr>
-                                <th data-title="No." scope="row">2</th>
-                                <th data-title="Trastorno mental" scope="row">Ansiedad</th>
-                                <th data-title="Hombres" scope="row">5795</th>
-                                <th data-title="Mujeres" scope="row">14320</th>
-                                <th data-title="Total de pacientes" scope="row">20115</th>
-                            </tr>
-                            <tr>
-                                <th data-title="No." scope="row">3</th>
-                                <th data-title="Trastorno mental" scope="row">Trastorno depresivo</th>
-                                <th data-title="Hombres" scope="row">4106</th>
-                                <th data-title="Mujeres" scope="row">13759</th>
-                                <th data-title="Total de pacientes" scope="row">17865</th>
-                            </tr>
-                            <tr>
-                                <th data-title="No." scope="row">4</th>
-                                <th data-title="Trastorno mental" scope="row">Trastorno del comportamiento</th>
-                                <th data-title="Hombres" scope="row">3223</th>
-                                <th data-title="Mujeres" scope="row">1735</th>
-                                <th data-title="Total de pacientes" scope="row">4958</th>
-                            </tr>
-                            <tr>
-                                <th data-title="No." scope="row">5</th>
-                                <th data-title="Trastorno mental" scope="row">Trastorno de consumo de alcohol</th>
-                                <th data-title="Hombres" scope="row">2185</th>
-                                <th data-title="Mujeres" scope="row">590</th>
-                                <th data-title="Total de pacientes" scope="row">2775</th>
-                            </tr>
-                            <tr>
-                                <th data-title="No." scope="row">6</th>
-                                <th data-title="Trastorno mental" scope="row">Trastorno de consumo de otras drogas</th>
-                                <th data-title="Hombres" scope="row">853</th>
-                                <th data-title="Mujeres" scope="row">230</th>
-                                <th data-title="Total de pacientes" scope="row">1083</th>
-                            </tr>
-                            <tr>
-                                <th data-title="No." scope="row">7</th>
-                                <th data-title="Trastorno mental" scope="row">Intento de suicidio</th>
-                                <th data-title="Hombres" scope="row">120</th>
-                                <th data-title="Mujeres" scope="row">221</th>
-                                <th data-title="Total de pacientes" scope="row">341</th>
-                            </tr>
-                            <tr>
-                                <th data-title="No." scope="row">8</th>
-                                <th data-title="Trastorno mental" scope="row">Síndrome y/o trastorno psicótico</th>
-                                <th data-title="Hombres" scope="row">111</th>
-                                <th data-title="Mujeres" scope="row">138</th>
-                                <th data-title="Total de pacientes" scope="row">249</th>
-                            </tr>
-                            <tr>
-                                <th data-title="No." scope="row">9</th>
-                                <th data-title="Trastorno mental" scope="row">Trastornos alimentarios (Anorexia, Bulimia)</th>
-                                <th data-title="Hombres" scope="row">36</th>
-                                <th data-title="Mujeres" scope="row">190</th>
-                                <th data-title="Total de pacientes" scope="row">226</th>
-                            </tr>
-                            <tr>
-                                <th data-title="No." scope="row">10</th>
-                                <th data-title="Trastorno mental" scope="row">Violencia escolar (Bullying)</th>
-                                <th data-title="Hombres" scope="row">3</th>
-                                <th data-title="Mujeres" scope="row">3</th>
-                                <th data-title="Total de pacientes" scope="row">6</th>
-                            </tr>
-                        </tbody>
-                        
-                    </table>
+                    <div id="tablaClasificacion"></div>
                 </div>
             </div>
         </div>
@@ -273,6 +189,101 @@
     <script src="{% static 'js/templatemo.js' %}"></script>
     <!-- Custom -->
     <script src="{% static 'js/custom.js' %}"></script>
+
+    <script type="text/javascript">
+
+                        let miTabla = "<table class='table'><thead class = 'thead-light'>";
+                        miTabla += "<tr><th scope='col'>No.</th>"+
+                                "<th scope='col'>Trastorno mental</th>" +
+                                "<th scope='col'>Hombres</th>" +
+                                "<th scope='col'>Mujeres</th>" +
+                                "<th scope='col'>Total de pacientes</th></tr></thead>";
+                        miTabla += "<tbody>";
+
+                        miTabla += "<tr>"+
+                                "<th data-title='No.' scope='row'>1</th>" +
+                                "<th data-title='Trastorno mental' scope='row'>Violencia familiar/maltrato infantil</th>" +
+                                "<th data-title='Hombres' scope='row'> {{violenciaM.Atendidos__sum}} </th>" +
+                                "<th data-title='Mujeres' scope='row'> {{violenciaF.Atendidos__sum}} </th>" +
+                                "<th data-title='Total de pacientes' scope='row'>"+({{violenciaM.Atendidos__sum}}+{{violenciaF.Atendidos__sum}})+"</th>" +
+                            "</tr>";
+                        
+                        miTabla += "<tr>"+
+                                "<th data-title='No.' scope='row'>2</th>" +
+                                "<th data-title='Trastorno mental' scope='row'>Ansiedad</th>" +
+                                "<th data-title='Hombres' scope='row'> {{ansiedadM.Atendidos__sum}} </th>" +
+                                "<th data-title='Mujeres' scope='row'> {{ansiedadF.Atendidos__sum}} </th>" +
+                                "<th data-title='Total de pacientes' scope='row'>"+({{ansiedadM.Atendidos__sum}}+{{ansiedadF.Atendidos__sum}})+"</th>" +
+                            "</tr>";
+
+                        miTabla += "<tr>"+
+                                "<th data-title='No.' scope='row'>3</th>" +
+                                "<th data-title='Trastorno mental' scope='row'>Transtorno Depresivo</th>" +
+                                "<th data-title='Hombres' scope='row'> {{depresionM.Atendidos__sum}} </th>" +
+                                "<th data-title='Mujeres' scope='row'> {{depresionF.Atendidos__sum}} </th>" +
+                                "<th data-title='Total de pacientes' scope='row'>"+({{depresionM.Atendidos__sum}}+{{depresionF.Atendidos__sum}})+"</th>" +
+                            "</tr>";
+                        
+                        miTabla += "<tr>"+
+                                "<th data-title='No.' scope='row'>4</th>" +
+                                "<th data-title='Trastorno mental' scope='row'>Trastorno del comportamiento</th>" +
+                                "<th data-title='Hombres' scope='row'> {{comportamientoM.Atendidos__sum}} </th>" +
+                                "<th data-title='Mujeres' scope='row'> {{comportamientoF.Atendidos__sum}} </th>" +
+                                "<th data-title='Total de pacientes' scope='row'>"+({{comportamientoM.Atendidos__sum}}+{{comportamientoF.Atendidos__sum}})+"</th>" +
+                            "</tr>";
+                        
+                        miTabla += "<tr>"+
+                                "<th data-title='No.' scope='row'>5</th>" +
+                                "<th data-title='Trastorno mental' scope='row'>Trastorno de consumo de alcohol</th>" +
+                                "<th data-title='Hombres' scope='row'> {{alcoholM.Atendidos__sum}} </th>" +
+                                "<th data-title='Mujeres' scope='row'> {{alcoholF.Atendidos__sum}} </th>" +
+                                "<th data-title='Total de pacientes' scope='row'>"+({{alcoholM.Atendidos__sum}}+{{alcoholF.Atendidos__sum}})+"</th>" +
+                            "</tr>";
+
+                        miTabla += "<tr>"+
+                                "<th data-title='No.' scope='row'>6</th>" +
+                                "<th data-title='Trastorno mental' scope='row'>Trastorno de consumo de otras drogas</th>" +
+                                "<th data-title='Hombres' scope='row'> {{drogasM.Atendidos__sum}} </th>" +
+                                "<th data-title='Mujeres' scope='row'> {{drogasF.Atendidos__sum}} </th>" +
+                                "<th data-title='Total de pacientes' scope='row'>"+({{drogasM.Atendidos__sum}}+{{drogasF.Atendidos__sum}})+"</th>" +
+                            "</tr>";
+                        
+                        miTabla += "<tr>"+
+                                "<th data-title='No.' scope='row'>7</th>" +
+                                "<th data-title='Trastorno mental' scope='row'>Intento de suicidio</th>" +
+                                "<th data-title='Hombres' scope='row'> {{suicidioM.Atendidos__sum}} </th>" +
+                                "<th data-title='Mujeres' scope='row'> {{suicidioF.Atendidos__sum}} </th>" +
+                                "<th data-title='Total de pacientes' scope='row'>"+({{suicidioM.Atendidos__sum}}+{{suicidioF.Atendidos__sum}})+"</th>" +
+                            "</tr>";
+                        
+                        miTabla += "<tr>"+
+                                "<th data-title='No.' scope='row'>8</th>" +
+                                "<th data-title='Trastorno mental' scope='row'>Síndrome y/o trastorno psicótico</th>" +
+                                "<th data-title='Hombres' scope='row'> {{psicoM.Atendidos__sum}} </th>" +
+                                "<th data-title='Mujeres' scope='row'> {{psicoF.Atendidos__sum}} </th>" +
+                                "<th data-title='Total de pacientes' scope='row'>"+({{psicoM.Atendidos__sum}}+{{psicoF.Atendidos__sum}})+"</th>" +
+                            "</tr>";
+                        
+                        miTabla += "<tr>"+
+                                "<th data-title='No.' scope='row'>9</th>" +
+                                "<th data-title='Trastorno mental' scope='row'>Trastornos alimentarios (Anorexia, Bulimia)</th>" +
+                                "<th data-title='Hombres' scope='row'> {{alimentacionM.Atendidos__sum}} </th>" +
+                                "<th data-title='Mujeres' scope='row'> {{alimentacionF.Atendidos__sum}} </th>" +
+                                "<th data-title='Total de pacientes' scope='row'>"+({{alimentacionM.Atendidos__sum}}+{{alimentacionF.Atendidos__sum}})+"</th>" +
+                            "</tr>";
+                        
+                        miTabla += "<tr>"+
+                                "<th data-title='No.' scope='row'>10</th>" +
+                                "<th data-title='Trastorno mental' scope='row'>Violencia escolar (Bullying)</th>" +
+                                "<th data-title='Hombres' scope='row'> {{escolarM.Atendidos__sum}} </th>" +
+                                "<th data-title='Mujeres' scope='row'> {{escolarF.Atendidos__sum}} </th>" +
+                                "<th data-title='Total de pacientes' scope='row'>"+({{escolarM.Atendidos__sum}}+{{escolarF.Atendidos__sum}})+"</th>" +
+                            "</tr>";
+
+                        miTabla += "</tbody></table>";
+
+                        document.getElementById('tablaClasificacion').innerHTML = miTabla;
+                    </script>
 
     <!--Grafico circular-->
     
