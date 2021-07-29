@@ -49,12 +49,12 @@ function asignarNombre(valor){
 }
 
 function asignarColor(casos){
-    if(casos >= 0 && casos < 300) return colores[0];
-    else if(casos >= 300 && casos < 600) return colores[1];
-    else if(casos >= 600 && casos < 900) return colores[2];
-    else if(casos >= 900 && casos < 1200) return colores[3];
-    else if(casos >= 1200 && casos < 1500) return colores[4];
-    else if(casos >= 1500 && casos < 1800) return colores[5];
-    else if(casos >= 1800 && casos < 2100) return colores[6];
-    else if(casos >= 2100 && casos <= 2400) return colores[7];
+    if(casos >= 0 && casos < 1500) return colores[0];
+    else if(casos >= 1500 && casos < 3000) return colores[1];
+    else if(casos >= 3000 && casos < 4500) return colores[2];
+    else if(casos >= 4500 && casos < 6000) return colores[3];
+    else if(casos >= 6000 && casos < 7500) return colores[4];
+    else if(casos >= 7500 && casos < 9000) return colores[5];
+    else if(casos >= 9000 && casos < 10500) return colores[6];
+    else if(casos >= 10500 && casos <= 12000) return colores[7];
 }
