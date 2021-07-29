@@ -143,7 +143,12 @@ function showResult() {
     const scoreText = result_box.querySelector(".score_text");
     const infoText = result_box.querySelector(".info_text");
     let scoreTag = '<span>Usted tiene una puntuación de<p>' + userScore + '</p></span>';
-    let info = '<span> Para comprender el puntaje es necesario saber, si su puntaje oscila esta en el rango de 1-4 usted probablemente posee una depresión mínima, si su puntaje se encuentre en el rango de 5-9 usted podria estar padeciendo una depresión leve, si su puntaje se encuentra en el rango de 10-14 posiblemente padezca una depresion moderada, si su puntaje se encuentra ente 15-19 es posible que usted padezca una depresión moderadamente grave y finalmente si usted tiene un puntaje mayor o igual a 20 es probable que padezca una depresión severa.</span>';
+    let info = '<span> Podemos padecer una: </span>' +
+        '<span> - DEPRESIÓN MÍNIMA si su puntaje oscila en el rango de 1-4 . </span>' +
+        '<span> - DEPRESIÓN LEVE si su puntaje se encuentre en el rango de 5-9 . </span>' +
+        '<span> - DEPRESIÓN MODERADA si su puntaje se encuentra en el rango de 10-14 . </span>' +
+        '<span> - DEPRESIÓN MODERADAMENTE GRAVE si su puntaje se encuentra ente 15-19 . </span>' +
+        '<span> - DEPRESIÓN SEVERA si usted tiene un puntaje mayor o igual a 20 . <span>';
     scoreText.innerHTML = scoreTag; //adding new span tag inside score_Text
     infoText.innerHTML = info;
 }

@@ -143,7 +143,8 @@ function showResult() {
     const scoreText = result_box.querySelector(".score_text");
     const infoText = result_box.querySelector(".info_text");
     let scoreTag = '<span>La puntuación es de<p>' + userScore + '</p></span>';
-    let info = '<span> La media de puntuación es de 96.8, entonces podemos preocuparnos por el comportamiento del niño cuando se sobrepasa esa puntuación, ademas las situaciones mencionadas anteriormente corresponden a comportamientos negativos, y unas actitudes negativas repetidas constantemente son un mal indicador.</span>';
+    let info = '<span> - Superar la media de puntuación es de 96.8 (puntuación promedio) es indicador de problemas. </span>' +
+        '<span> Podemos preocuparnos por el comportamiento del niño cuando se sobrepasa esa puntuación, ademas las situaciones mencionadas anteriormente corresponden a comportamientos negativos, y unas actitudes negativas repetidas constantemente son un mal indicio. </span>';
     scoreText.innerHTML = scoreTag; //adding new span tag inside score_Text
     infoText.innerHTML = info;
 }

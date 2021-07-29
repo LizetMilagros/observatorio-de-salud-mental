@@ -135,13 +135,17 @@ function showResult() {
     const scoreText = result_box.querySelector(".score_text");
     const infoText = result_box.querySelector(".info_text");
     let scoreTag = '<span>Usted tiene una puntuación de<p>' + userScore + '</p></span>';
-    let info = '<span> Podemos interpretar la puntuacion de la siguiente manera. Cuando tenemos una puntuación entre 0 y 12 tenemos los síntomas de una psicosis leve o inexistente. Cuando obtenemos una puntuación entre 12 y 24 corresponde a una psicosis moderada, cuando obtenemos una puntuación entre 24 y 36 corresponde a una psicosis moderadamente alta, ya puede causar preocupación en nosotros, y finalmente si obtenemos una puntuación mayor a 36 es un nivel alto y debemos acudir ante un especialista y obtener más información al respecto. </span>';
+    let info = '<span> Se presentan indicios de una:   </span>' +
+        '<span> - PSICOSIS LEVE O INEXISTENTE si su puntaje oscila entre 0-12 . </span>' +
+        '<span> - PSICOSIS MODERADA si su puntaje se encuentre en el rango de 12-24 . </span>' +
+        '<span> - PSICOSIS MODERADAMENTE ALTA si su puntaje se encuentra en el rango de 24-36 . </span>' +
+        '<span> - PSICOSIS ALTA si usted tiene un puntaje mayor o igual a 36 . <span>';
     scoreText.innerHTML = scoreTag; //adding new span tag inside score_Text
     infoText.innerHTML = info;
 }
 
 function queCounter(index) {
     //creating a new span tag and passing the question number and total question
-    let totalQueCounTag = '<span><p>' + index + '</p> de <p>' + questions.length + '</p> Sintomas</span>';
+    let totalQueCounTag = '<span><p>' + index + '</p> de <p>' + questions.length + '</p> Situaciones</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag; //adding new span tag inside bottom_ques_counter
 }

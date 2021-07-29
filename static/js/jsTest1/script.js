@@ -135,7 +135,9 @@ function showResult() {
     const scoreText = result_box.querySelector(".score_text");
     const infoText = result_box.querySelector(".info_text");
     let scoreTag = '<span>Usted tiene una puntuación de<p>' + userScore + '</p></span>';
-    let info = '<span> Consideramos que convendría empezar a preocuparnos por nuestro nivel de ansiedad cuando tengamos más ansiedad que el 75% de la población. Sabemos que los varones el centil 75 con respecto a la población, alcanzan unos 16 puntos en la suma de sus puntuaciones autoevaluadas sobre estos 12 síntomas (cognitivos, fisiológicos y motores). En cambio, como las mujeres tienen en general mayores niveles de ansiedad que los varones, una mujer alcanza el centil 75 (supera al 75% de las mujeres), cuando sus puntuaciones en los 12 síntomas suman unos 19 puntos. </span>';
+    let info = '<span> Consideramos que convendría empezar a preocuparnos por nuestro nivel de ansiedad cuando tengamos más ansiedad que el 75% de la población. </span>' +
+        '<span> - En hombres con una puntación mayor a 16 puntos. </span>' +
+        '<span> - En mujeres con una puntación mayor a 19 puntos. </span>';
     scoreText.innerHTML = scoreTag; //adding new span tag inside score_Text
     infoText.innerHTML = info;
 }
