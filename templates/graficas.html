@@ -137,8 +137,9 @@
             
             'Amazonas',
             'Ancash',
-            'Apurimas',
+            'Apurimac',
             'Arequipa',
+            'Ayacucho',
             'Cajamarca',
             'Callao',
             'Cusco',
@@ -157,7 +158,7 @@
             'Puno',
             'San Martin',
             'Tacna',
-            'Tumbres',
+            'Tumbes',
             'Ucayali',
         ],
         crosshair: true
@@ -184,11 +185,11 @@
     },
     series: [{
         name: 'Atendidos',
-        data: [49, 71, 106, 129, 144, 176, 135, 148, 216, 194, 95, 54]
+        data: [0, 1373, 3652, 3715, 2691, 621, 11267, 2770, 3278, 6270, 7243, 10255, 498, 5681, 11590, 543, 358, 2521, 6, 2914, 1225, 2450, 1353, 0, 0]
 
     }, {
         name: 'Atenciones',
-        data: [83, 78, 98, 93, 106, 84, 105, 104, 91, 83, 106, 92]
+        data: [0, 2577, 7868, 6445, 6441, 1780, 18645, 4585, 5168, 12640, 13721, 17918, 694, 12073, 24452, 1121, 670, 3827, 11, 5374, 2441, 5720, 2729, 0, 1]
 
     
     }]
@@ -226,42 +227,33 @@ Highcharts.chart('container-pie', {
         colorByPoint: true,
         data: [{
             name: 'Enero',
-            y: 61.41,
+            y: 15,
             sliced: true,
             selected: true
         }, {
             name: 'Febrero',
-            y: 11.84
+            y: 11
         }, {
             name: 'Marzo',
-            y: 10.85
+            y: 12
         }, {
             name: 'Abril',
-            y: 4.67
+            y: 12
         }, {
             name: 'Mayo',
-            y: 4.18
+            y: 13
         }, {
             name: 'Junio',
-            y: 1.64
+            y: 14
         }, {
             name: 'Julio',
-            y: 1.6
+            y: 13
         }, {
             name: 'Agosto',
-            y: 1.2
+            y: 11
         }, {
             name: 'Septiembre',
-            y: 2.61
-        },{
-            name: 'Octubre',
-            y: 2.61
-        },{
-            name: 'Noviembre',
-            y: 2.61
-        },{
-            name: 'Diciembre',
-            y: 2.61
+            y: 1
         }]
     }]
 });
@@ -287,16 +279,16 @@ series: [{
     name: 'Representatives',
     keys: ['name', 'y', 'color', 'label'],
     data: [
-        ['Violencia Familiar', 69, '#5B2C6F', 'Violencia Familiar'],
-        ['Ansiedad', 153, '#EB001F', 'Ansiedad'],
-        ['Transtorno Depresivo', 67, '#64A12D', 'Transtorno Depresivo'],
-        ['Transtorno del Comportamiento', 80, '#FFED00', 'Transtorno del comportamiento'],
-        ['Transtorno de cosumo de alcohol', 200, '#000000', 'Transtorno de cosumo de alcohol'],
-        ['Trastorno de consumo de otras drogas', 46, '#008AC5', 'Trastorno de consumo de otras drogas'],
-        ['Intento de suicidio', 94, '#009EE0', 'Intento de suicidio'],
-        ['Síndrome y/o trastorno psicótico', 138, '#D35400 ', 'Síndrome y/o trastorno psicótico'],
-        ['Trastornos alimentarios', 36, '#F5B7B1 ', 'Trastornos alimentarios'],
-        ['Violencia escolar', 40, '#2E4053 ', 'Violencia escolar'],
+        ['Violencia Familiar',42 , '#5B2C6F', 'Violencia Familiar'],
+        ['Ansiedad', 25, '#EB001F', 'Ansiedad'],
+        ['Transtorno Depresivo', 22, '#64A12D', 'Transtorno Depresivo'],
+        ['Transtorno del Comportamiento', 6, '#FFED00', 'Transtorno del comportamiento'],
+        ['Transtorno de cosumo de alcohol', 3, '#000000', 'Transtorno de cosumo de alcohol'],
+        ['Trastorno de consumo de otras drogas', 2, '#008AC5', 'Trastorno de consumo de otras drogas'],
+        ['Intento de suicidio', 1, '#009EE0', 'Intento de suicidio'],
+        ['Síndrome y/o trastorno psicótico', 1, '#D35400 ', 'Síndrome y/o trastorno psicótico'],
+        ['Trastornos alimentarios', 1, '#F5B7B1 ', 'Trastornos alimentarios'],
+        ['Violencia escolar', 1, '#2E4053 ', 'Violencia escolar'],
     ],
     dataLabels: {
         enabled: true,
